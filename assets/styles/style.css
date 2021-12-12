@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.nav-image {
+    width: 50px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    padding: 10px 25px;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: aqua;
+    font-size: 18px;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: blueviolet;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.side-bar {
+    top: 50px;
+    bottom: 0px;
+    width: 300px;
+    background-color: black;
+    position: absolute;
+}
+
+.home {
+    background-image: url('../images/background.jpg');
+    left: 300px;
+    bottom: 0px;
+    top: 50px;
+    right: 0px;
+    position: absolute;
+}
+
+.home h2 {
+    top: 30%;
+    left: 10%;
+    font-size: 50px;
+    color: aqua;
+    position: relative;
+}
+
+.home h3 {
+    top: 32%;
+    left: 10%;
+    font-size: 40px;
+    font-family: Arial;
+    word-spacing: 5px;
+    color: plum;
+    position: relative;
+}
+
+.home h5 {
+    top: 34%;
+    left: 10%;
+    font-size: 25px;
+    color: #7445bd;
+    position: relative;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.home p {
+    top: 40%;
+    left: 10%;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    font-family: Calibri;
+    position: relative;
+
+}
