@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title> Case 2-Simple Web Layout</title>
-    <link href="assets/styles/normalize.css" rel="stylesheet">
+    <link href="../case-2/assets/styles/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
+    <link href="../case-2/assets/styles/fontawesome/css/all.css" rel="stylesheet">
     <style>
         header {
             position: relative;
@@ -26,6 +26,7 @@
             font-size: 15px;
             font-family: 'Roboto', sans-serif;
             list-style: none;
+            text-decoration: none;
             color: #04043b;
         }
 
@@ -38,6 +39,8 @@
             cursor: pointer;
             color: #bb0606;
         }
+
+        /*main content starts*/
 
         main {
             top: 5px;
@@ -55,52 +58,71 @@
 
         nav > ul {
             list-style: none;
-            color: white;
-            font-family: Calibri;
-            font-size: 20px;
+            margin-left: 20px;
+            margin-top: 100px;
         }
 
         nav > ul > li {
-            padding: 10px 0 10px 0;
+            padding: 15px 0 25px 0;
         }
 
-        nav > ul > li:hover {
+        nav > ul > li > a {
+            color: white;
+            font-family: Calibri;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        nav > ul > li > a:hover {
             cursor: pointer;
             color: aqua;
         }
 
-        .gif1 {
-            left: 355px;
-            width: 370px;
-            top: 0;
+        i {
+            padding-right: 7px;
+            color: plum;
+        }
+
+        main > section {
+            margin-left: 320px;
+            padding: 10px;
+        }
+
+        main > section > section {
             position: relative;
-            border: solid black 5px;
-            display: inline;
+            height: 300px;
         }
 
-        .gif2 {
-            left: 725px;
-            width: 370px;
-            top: 0;
+        main > section > section > div {
+            border: 1px solid black;
             position: absolute;
-            border: solid black 5px;
-            display: inline;
+            height: 100%;
+            width: calc(100% / 3);
         }
 
-        .gif3 {
-            left: 1095px;
-            width: 370px;
-            top: 0;
-            position: absolute;
-            border: solid black 5px;
-            display: inline;
+        main > section > section > div:nth-child(1) {
+            left: 0;
+            background: url("../case-2/assets/images/giphy.gif");
+            background-size: cover;
         }
+
+        main > section > section > div:nth-child(2) {
+            left: calc(100% / 3);
+            background: url("../case-2/assets/images/giphy.gif");
+            background-size: cover;
+        }
+
+        main > section > section > div:nth-child(3) {
+            left: calc((100% / 3) * 2);
+            background: url("../case-2/assets/images/giphy.gif");
+            background-size: cover;
+        }
+
+        /*main content ends*/
 
         p {
-            left: 355px;
-            position: relative;
-            display: inline-block;
-            font-size: 16px;
+            margin-left: 10px;
+            padding: 10px;
         }
 
 
@@ -110,18 +132,16 @@
             left: 0;
             right: 0;
             bottom: 0;
-            position: absolute;
+            position: relative;
         }
 
 
-        footer > h3 {
-            position: absolute;
-            left: 50vw;
-            top: 25%;
+        footer > p {
+            text-align: center;
+            padding-top: 18px;
             margin: auto;
+            font-weight: bold;
         }
-
-
     </style>
 </head>
 <body>
@@ -140,17 +160,17 @@
 <main>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Service</li>
-            <li>Contacts</li>
-            <li>About Us</li>
+            <li><i class="fas fa-home"></i><a href="/myprojects/css/case-1/case-1.html">Home</a></li>
+            <li><i class="fas fa-globe-asia"></i><a href="/myprojects/css/case-1/case-1.html">Service</a></li>
+            <li><i class="fas fa-address-book"></i><a href="/myprojects/css/case-1/case-1.html">Contacts</a></li>
+            <li><i class="fas fa-exclamation-circle"></i><a href="/myprojects/css/case-1/case-1.html">About Us</a></li>
         </ul>
     </nav>
     <section>
         <section>
-            <div><img class="gif1" src="../case-2/assets/images/giphy.gif" alt="gif"></div>
-            <div><img class="gif2" src="../case-2/assets/images/giphy.gif" alt="gif"></div>
-            <div><img class="gif3" src="../case-2/assets/images/giphy.gif" alt="gif"></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </section>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci cumque debitis dignissimos dolorem
             dolores esse et in magni minus molestiae necessitatibus recusandae,<br> sapiente tempora ullam! Cumque
@@ -166,9 +186,9 @@
             dolores esse et in magni minus molestiae necessitatibus recusandae,<br> sapiente tempora ullam! Cumque
             exercitationem necessitatibus quas.</p>
     </section>
-    <footer>
-        <h3>Developed By IJSE</h3>
-    </footer>
 </main>
 </body>
+<footer>
+    <p>Developed By IJSE</p>
+</footer>
 </html>
