@@ -71,8 +71,37 @@
       color: white;
       position: absolute;
     }
+    body>section:nth-child(3){
+      width: calc(100vw - (100vw - 100%));
+      height: 100vh;
+      background-color: rgba(68, 67, 67, 0.99);
+      position: relative;
+    }
 
+    body>section:nth-child(3)>h1{
+      top:50vh;
+      left: 50vw;
+      transform: translate(-50% ,-50% );
+      position: absolute;
+      font-size:70px;
+    }
 
+    body>section:nth-child(3)>section{
+      top:0;
+      left: 0;
+      right: 0;
+      width:calc(100vw - (100vw - 100%));
+      height: 70px;
+      background-color: rgba(38, 38, 38, 0.55);
+      position: sticky;
+    }
+
+    body>section:nth-child(3)>section>h2{
+      top:6px;
+      left:10px;
+      color: white;
+      position: absolute;
+    }
   </style>
 
 </head>
