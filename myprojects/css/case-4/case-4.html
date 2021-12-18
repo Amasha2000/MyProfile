@@ -40,6 +40,39 @@
       position: absolute;
     }
 
+    body>section:nth-child(2){
+      width: calc(100vw - (100vw - 100%));
+      height: 100vh;
+      background-color: #1877a3;
+      position: relative;
+    }
+
+    body>section:nth-child(2)>h1{
+      top:50vh;
+      left: 50vw;
+      transform: translate(-50% ,-50% );
+      position: absolute;
+      font-size:70px;
+    }
+
+    body>section:nth-child(2)>section{
+      top:0;
+      left: 0;
+      right: 0;
+      width:calc(100vw - (100vw - 100%));
+      height: 70px;
+      background-color: rgba(5, 6, 78, 0.55);
+      position: sticky;
+    }
+
+    body>section:nth-child(2)>section>h2{
+      top:6px;
+      left:10px;
+      color: white;
+      position: absolute;
+    }
+
+
   </style>
 
 </head>
