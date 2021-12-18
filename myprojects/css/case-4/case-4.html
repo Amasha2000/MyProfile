@@ -1,170 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=width-device initial-scale=1">
-  <link rel="stylesheet" href="../case-4/assets/normalize.css">
-  <title>Case 4</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=width-device initial-scale=1">
+    <link rel="stylesheet" href="../case-4/assets/normalize.css">
+    <title>Case 4</title>
+    <style>
 
-    body>section:first-child{
-      width:calc(100vw - (100vw - 100%));
-      height: 100vh;
-      background-color: white;
-      position: relative;
+        body > section:first-child {
+            width: calc(100vw - (100vw - 100%));
+            height: 100vh;
+            background-color: white;
+            position: relative;
+        }
 
-    }
+        body > section:first-child > h1 {
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            font-size: 70px;
+        }
 
-    body>section:first-child>h1{
-      top:50vh;
-      left: 50vw;
-      transform: translate(-50% ,-50% );
-      position: absolute;
-      font-size: 70px;
-    }
+        body > section:first-child > section {
+            top: 0;
+            left: 0;
+            right: 0;
+            width: calc(100vw - (100vw - 100%));
+            height: 70px;
+            background-color: red;
+            position: sticky;
+        }
 
-    body>section:first-child>section{
-      top:0;
-      left: 0;
-      right: 0;
-      width:calc(100vw - (100vw - 100%));
-      height: 70px;
-      background-color: red;
-      position: sticky;
-    }
+        body > section:first-child > section > h2 {
+            top: 6px;
+            left: 10px;
+            color: white;
+            position: absolute;
+        }
 
-    body>section:first-child>section>h2{
-      top:6px;
-      left:10px;
-      color: white;
-      position: absolute;
-    }
+        body > section:nth-child(2) {
+            width: calc(100vw - (100vw - 100%));
+            height: 100vh;
+            background-color: #1877a3;
+            position: relative;
+        }
 
-    body>section:nth-child(2){
-      width: calc(100vw - (100vw - 100%));
-      height: 100vh;
-      background-color: #1877a3;
-      position: relative;
-    }
+        body > section:nth-child(2) > h1 {
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            font-size: 70px;
+        }
 
-    body>section:nth-child(2)>h1{
-      top:50vh;
-      left: 50vw;
-      transform: translate(-50% ,-50% );
-      position: absolute;
-      font-size:70px;
-    }
+        body > section:nth-child(2) > section {
+            top: 0;
+            left: 0;
+            right: 0;
+            width: calc(100vw - (100vw - 100%));
+            height: 70px;
+            background-color: rgba(5, 6, 78, 0.55);
+            position: sticky;
+        }
 
-    body>section:nth-child(2)>section{
-      top:0;
-      left: 0;
-      right: 0;
-      width:calc(100vw - (100vw - 100%));
-      height: 70px;
-      background-color: rgba(5, 6, 78, 0.55);
-      position: sticky;
-    }
+        body > section:nth-child(2) > section > h2 {
+            top: 6px;
+            left: 10px;
+            color: white;
+            position: absolute;
+        }
 
-    body>section:nth-child(2)>section>h2{
-      top:6px;
-      left:10px;
-      color: white;
-      position: absolute;
-    }
-    body>section:nth-child(3){
-      width: calc(100vw - (100vw - 100%));
-      height: 100vh;
-      background-color: rgba(68, 67, 67, 0.99);
-      position: relative;
-    }
+        body > section:nth-child(3) {
+            width: calc(100vw - (100vw - 100%));
+            height: 100vh;
+            background-color: rgba(68, 67, 67, 0.99);
+            position: relative;
+        }
 
-    body>section:nth-child(3)>h1{
-      top:50vh;
-      left: 50vw;
-      transform: translate(-50% ,-50% );
-      position: absolute;
-      font-size:70px;
-    }
+        body > section:nth-child(3) > h1 {
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            font-size: 70px;
+        }
 
-    body>section:nth-child(3)>section{
-      top:0;
-      left: 0;
-      right: 0;
-      width:calc(100vw - (100vw - 100%));
-      height: 70px;
-      background-color: rgba(38, 38, 38, 0.55);
-      position: sticky;
-    }
+        body > section:nth-child(3) > section {
+            top: 0;
+            left: 0;
+            right: 0;
+            width: calc(100vw - (100vw - 100%));
+            height: 70px;
+            background-color: rgba(38, 38, 38, 0.55);
+            position: sticky;
+        }
 
-    body>section:nth-child(3)>section>h2{
-      top:6px;
-      left:10px;
-      color: white;
-      position: absolute;
-    }
+        body > section:nth-child(3) > section > h2 {
+            top: 6px;
+            left: 10px;
+            color: white;
+            position: absolute;
+        }
 
-    body>section:nth-child(4){
-      width: calc(100vw - (100vw - 100%));
-      height: 100vh;
-      background-color: #ba1010;
-      position: relative;
-    }
+        body > section:nth-child(4) {
+            width: calc(100vw - (100vw - 100%));
+            height: 100vh;
+            background-color: #ba1010;
+            position: relative;
+        }
 
-    body>section:nth-child(4)>h1{
-      top:50vh;
-      left: 50vw;
-      transform: translate(-50% ,-50% );
-      position: absolute;
-      font-size:70px;
-    }
+        body > section:nth-child(4) > h1 {
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            font-size: 70px;
+        }
 
-    body>section:nth-child(4)>section{
-      top:0;
-      left: 0;
-      right: 0;
-      width:calc(100vw - (100vw - 100%));
-      height: 70px;
-      background-color: rgba(71, 72, 73, 0.55);
-      position: sticky;
-    }
+        body > section:nth-child(4) > section {
+            top: 0;
+            left: 0;
+            right: 0;
+            width: calc(100vw - (100vw - 100%));
+            height: 70px;
+            background-color: rgba(71, 72, 73, 0.55);
+            position: sticky;
+        }
 
-    body>section:nth-child(4)>section>h2{
-      top:6px;
-      left:10px;
-      color: white;
-      position: absolute;
-    }
-  </style>
+        body > section:nth-child(4) > section > h2 {
+            top: 6px;
+            left: 10px;
+            color: white;
+            position: absolute;
+        }
+    </style>
 
 </head>
 
 <body>
 <section>
-  <section>
-    <h2>Card 1</h2>
-  </section>
-  <h1>Hello</h1>
+    <section>
+        <h2>Card 1</h2>
+    </section>
+    <h1>Hello</h1>
 </section>
 
 <section>
-  <section>
-    <h2>Card 2</h2>
-  </section>
-  <h1>How</h1>
+    <section>
+        <h2>Card 2</h2>
+    </section>
+    <h1>How</h1>
 </section>
 
 <section>
-  <section>
-    <h2>Card 3</h2>
-  </section>
-  <h1>Are</h1>
+    <section>
+        <h2>Card 3</h2>
+    </section>
+    <h1>Are</h1>
 </section>
 
 <section>
-  <section>
-    <h2>Card 4</h2>
-  </section>
-  <h1>You...?</h1>
+    <section>
+        <h2>Card 4</h2>
+    </section>
+    <h1>You...?</h1>
 </section>
 
 </body>
