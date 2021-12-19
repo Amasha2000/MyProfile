@@ -24,8 +24,8 @@
     font-weight: 600;
 }
 
-.nav-links ul li a:hover{
-    color: #ad8aec;
+.nav-links ul li a:hover {
+    color: rgba(177, 136, 243, 0.97);
 }
 
 .nav-links ul li::after {
@@ -35,7 +35,7 @@
     background: blueviolet;
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
 .nav-links ul li:hover::after {
@@ -50,19 +50,19 @@
     position: absolute;
 }
 
-.side-bar h3{
+.side-bar h3 {
     position: absolute;
     color: white;
     text-align: center;
     font-family: 'Satisfy', cursive;
-    left:25%;
-    top:60%;
+    left: 25%;
+    top: 60%;
     font-size: 45px;
     transform: rotate(-40deg);
 }
 
 .home {
-    background-image:linear-gradient(rgba(2, 9, 47, 0.65), rgba(4, 9, 30, 0.10)),url('../images/background.jpg');
+    background-image: linear-gradient(rgba(2, 9, 47, 0.65), rgba(4, 9, 30, 0.10)), url('../images/background.jpg');
     left: 28%;
     bottom: 0;
     top: 70px;
@@ -71,11 +71,51 @@
     overflow: hidden;
 }
 
-.wave-hand-image{
+span {
+    top: 15%;
+    left: 70%;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 6px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.1);
+    position: absolute;
+    animation: animate 4.5s linear infinite;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, white, transparent);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(315deg) translateX(0);
+    }
+    100% {
+        transform: rotate(315deg) translateX(-1000px);
+    }
+}
+
+span:first-child {
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 2s;
+}
+
+.wave-hand-image {
     position: absolute;
     width: 38%;
-    top:2%;
-    right:-14%;
+    top: 2%;
+    right: -14%;
     transform: rotate(-28deg);
 }
 
@@ -111,7 +151,7 @@
     top: 65%;
     left: 10%;
     font-size: 23px;
-    font-weight:500;
+    font-weight: 500;
     color: white;
     font-family: Calibri;
     position: absolute;
