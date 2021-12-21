@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=width-device initial-scale=1">
+    <title> Case 2-Simple Web Layout</title>
+    <link href="../case-2_responsive-version/assets/styles/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="../case-2_responsive-version/assets/styles/fontawesome/css/all.css" rel="stylesheet">
+    <style>
+        header {
+            position: relative;
+            height: 80px;
+            box-shadow: -2px 6px 9px -4px #917a7a;
+        }
+
+        header > img {
+            width: 70px;
+            margin: 6px;
+        }
+
+        header > ul {
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+            margin: 28px;
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            list-style: none;
+            color: #04043b;
+        }
+
+        header > ul > li {
+            padding: 0 15px 0 15px;
+            display: inline-block;
+        }
+
+        header > ul > li:hover {
+            cursor: pointer;
+            color: #bb0606;
+        }
+
+        /*main content starts*/
+
+        main {
+            top: 5px;
+            position: relative;
+        }
+
+        main > nav {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 320px;
+            background-color: purple;
+            position: absolute;
+        }
+
+        nav > ul {
+            list-style: none;
+            margin-left: 20px;
+            margin-top: 100px;
+        }
+
+        nav > ul > li > a {
+            color: white;
+            font-family: Calibri;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        nav > ul > li {
+            padding: 15px 0 25px 0;
+        }
+
+        nav > ul > li > a:hover {
+            cursor: pointer;
+            color: aqua;
+        }
+
+        i {
+            padding-right: 7px;
+            color: plum;
+        }
+
+        main > section {
+            margin-left: 320px;
+            padding: 10px;
+        }
+
+        main > section > section {
+            position: relative;
+            height: 300px;
+            display: flex;
+        }
+
+        main > section > section > div {
+            flex-grow: 1;
+        }
+
+        main > section > section > div:nth-child(1) {
+            background-image: url("assets/images/giphy.gif");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        main > section > section > div:nth-child(2) {
+            background-image: url("assets/images/giphy.gif");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        main > section > section > div:nth-child(3) {
+            background-image: url("assets/images/giphy.gif");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        p {
+            margin-left: 10px;
+            padding: 10px;
+        }
+
+        /*main content ends*/
+
+
+        footer {
+            height: 55px;
+            background-color: grey;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: relative;
+        }
+
+        footer > p {
+            text-align: center;
+            padding-top: 18px;
+            margin: auto;
+            font-weight: bold;
+        }
+
+        @media all and (max-width: 425px) {
+            header > img {
+                width: 46px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 6px;
+                margin: auto;
+            }
+
+            header > ul {
+                width: max-content;
+                right: 0;
+                left: 0;
+                padding-left: 0;
+                bottom: 5px;
+                margin: auto;
+                font-size: 13px;
+            }
+
+            header > ul > li {
+                padding: 0 5px 0 5px;
+            }
+
+            main > nav {
+                display: none;
+            }
+
+            main > section {
+                margin-left: 0;
+            }
+
+            main > section > section {
+                flex-direction: column;
+                height: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img alt="" src="assets/images/logo.jpg">
+
+    <ul>
+        <li>Home</li>
+        <li>Service</li>
+        <li>Contacts</li>
+        <li>About Us</li>
+    </ul>
+</header>
+
+<main>
+    <nav>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="index.html">Home</a></li>
+            <li><i class="fas fa-globe-asia"></i><a href="index.html">Service</a></li>
+            <li><i class="fas fa-address-book"></i><a href="index.html">Contacts</a></li>
+            <li><i class="fas fa-exclamation-circle"></i><a href="index.html">About Us</a></li>
+        </ul>
+    </nav>
+    <section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci cumque debitis dignissimos dolorem
+            dolores esse et in magni minus molestiae necessitatibus recusandae, sapiente tempora ullam! Cumque
+            exercitationem necessitatibus quas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci cumque debitis dignissimos dolorem
+            dolores esse et in magni minus molestiae necessitatibus recusandae, sapiente tempora ullam! Cumque
+            exercitationem necessitatibus quas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci cumque debitis dignissimos dolorem
+            dolores esse et in magni minus molestiae necessitatibus recusandae, sapiente tempora ullam! Cumque
+            exercitationem necessitatibus quas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci cumque debitis dignissimos dolorem
+            dolores esse et in magni minus molestiae necessitatibus recusandae, sapiente tempora ullam! Cumque
+            exercitationem necessitatibus quas.</p>
+    </section>
+</main>
+</body>
+<footer>
+    <p>Developed By IJSE</p>
+</footer>
+</html>

@@ -1,3 +1,8 @@
+.home{
+    width:calc(100vw - (100vw - 100%));
+    height: 100vh;
+}
+
 .nav-links {
     height: 70px;
     display: flex;
@@ -61,8 +66,8 @@
     transform: rotate(-40deg);
 }
 
-.home {
-    background-image: linear-gradient(rgba(2, 9, 47, 0.65), rgba(4, 9, 30, 0.10)), url('../images/background.jpg');
+.main-home {
+    background-image: linear-gradient(rgba(2, 9, 47, 0.41), rgba(4, 9, 30, 0.38)), url('../images/background.jpg');
     left: 28%;
     bottom: 0;
     top: 70px;
@@ -71,7 +76,7 @@
     overflow: hidden;
 }
 
-span {
+.star {
     top: 15%;
     left: 70%;
     width: 2px;
@@ -83,7 +88,7 @@ span {
     animation: animate 4.5s linear infinite;
 }
 
-span::before {
+.star::before {
     content: '';
     position: absolute;
     top: 15%;
@@ -103,7 +108,7 @@ span::before {
     }
 }
 
-span:first-child {
+.star:first-child {
     top: 0;
     right: 0;
     left: initial;
@@ -119,40 +124,77 @@ span:first-child {
     transform: rotate(-28deg);
 }
 
-.home h2 {
+.main-home h2 {
     top: 10%;
     left: 10%;
     font-size: 70px;
-    color: aqua;
+    color: white;
     position: absolute;
 }
 
-.home h3 {
+.main-home h3 {
     top: 28%;
     left: 10%;
     font-size: 60px;
-    font-family: Calibri;
     word-spacing: 5px;
-    color: #e886e8;
+    color: white;
     position: absolute;
 }
+.word-name{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 4px;
+    color: aqua;
+    animation-name: glow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
 
-.home h5 {
-    top: 45%;
+@keyframes glow {
+    from{
+      text-shadow: 0 0 6px rgba(134,228,233,1);
+    }
+    to{
+        text-shadow: 0 0 6px rgba(134,228,233,0.5),
+                     1px 1px 6px rgba(134,228,233,0.5),
+                     0 1px 5px rgba(134,228,233,0.5);
+    }
+}
+
+
+.main-home h5 {
+    top: 46%;
     left: 10%;
-    font-size: 30px;
-    color: #9e79de;
+    font-size: 29px;
+    color: white;
     position: absolute;
     font-family: Arial;
     font-weight: bold;
 }
 
-.home p {
-    top: 65%;
-    left: 10%;
-    font-size: 23px;
+.word-programmer{
+    color: #73f3f3;
+}
+
+.word-developer{
+    color: #68c0f6;
+}
+
+.word-designer{
+    color: #e770f5;
+}
+
+
+.main-home p {
+    top: 68%;
+    left: 5%;
+    right:5%;
+    font-size: 25px;
     font-weight: 500;
     color: white;
+    text-align: justify;
     font-family: Calibri;
     position: absolute;
 }
+
