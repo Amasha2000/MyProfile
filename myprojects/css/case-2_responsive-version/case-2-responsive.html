@@ -212,6 +212,49 @@
                 height: 150px;
             }
         }
+
+        @media all and (min-width: 600px) and (max-width: 768px) {
+            header > img{
+                width:50px;
+                left:10px;
+                position: absolute;
+                top:0;
+                bottom: 0;
+                margin: auto;
+            }
+
+            header > ul {
+                width: max-content;
+                right: 0;
+                bottom: 5px;
+                font-size: 15px;
+            }
+
+            header > ul > li {
+                padding: 0 8px 0 8px;
+            }
+            main>nav{
+                width: 180px;
+            }
+
+            nav>ul{
+                margin-left: 8px;
+                margin-top:70px;
+            }
+
+            nav>ul>li>a{
+                font-size: 18px;
+            }
+
+            main>section{
+                margin-left:180px;
+            }
+
+            main>section>section{
+                flex-direction: row;
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
