@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../case-8/assets/normalize.css">
+    <title>Case-8</title>
+    <style>
+        h1 {
+            color: #630363;
+            font-family: Calibri;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        main {
+            width: 700px;
+            height: 400px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        main > section {
+            height: 100%;
+            width: 400%;
+            display: flex;
+            animation: animate 10s alternate infinite;
+            animation-delay: 1s;
+        }
+
+        main > section > div {
+            width: 100%;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-25%);
+            }
+            50% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(-75%);
+            }
+        }
+
+        section > div:nth-child(1) {
+            background: url("../case-8/assets/images/image1.jpg"), center;
+            background-size: cover;
+        }
+
+        section > div:nth-child(2) {
+            background: url("../case-8/assets/images/image2.jpg"), center;
+            background-size: cover;
+        }
+
+        section > div:nth-child(3) {
+            background: url("../case-8/assets/images/image3.jpg"), center;
+            background-size: cover;
+        }
+
+        section > div:nth-child(4) {
+            background: url("../case-8/assets/images/image4.jpg"), center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to the Gallery</h1>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+
+</body>
+</html>
