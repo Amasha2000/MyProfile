@@ -1,24 +1,24 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 14px;
 }
 
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(#9393f1,aqua);
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#9393f1, aqua);
     border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(#f58dc3, #e82334);
 }
 
 /*start of the home page*/
-.home{
-    width:calc(100vw - (100vw - 100%));
+.home {
+    width: calc(100vw - (100vw - 100%));
     height: 100vh;
 }
 
 .nav-links {
-    left:0;
+    left: 0;
     right: 0;
     height: 70px;
     display: flex;
@@ -69,15 +69,90 @@
     top: 70px;
     bottom: 0;
     width: 28%;
-    background:repeating-linear-gradient(to left ,#030113, #031032,#030113);
+    background: repeating-linear-gradient(to left, #030113, #020c26, #020c26, #030113);
     position: absolute;
 }
 
-.my-image{
+.box-area {
     position: absolute;
-    opacity: 0.5;
-    top:10%;
-    left:0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: box-animate 10s linear infinite;
+    top: -50px;
+}
+
+.box-area li:nth-child(1) {
+    left: 40%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 0s;
+}
+
+
+.box-area li:nth-child(2) {
+    left: 12%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 1.5s;
+}
+
+.box-area li:nth-child(3) {
+    left: 70%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4) {
+    left: 20%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box-area li:nth-child(5) {
+    left: 65%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 0s;
+}
+
+.box-area li:nth-child(6) {
+    left: 15%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 3.5s;
+}
+
+@keyframes box-animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(800px) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+.my-image {
+    position: absolute;
+    opacity: 0.8;
+    top: 10%;
+    left: 0;
     right: 0;
     margin: auto;
     width: 60%;
@@ -85,7 +160,7 @@
 
 .side-bar h3 {
     position: absolute;
-    background:-webkit-radial-gradient(#7630e7, aqua);
+    background: -webkit-radial-gradient(#7630e7, aqua);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -97,7 +172,7 @@
 }
 
 .main-home {
-    background-image: linear-gradient(rgba(1, 6, 35, 0.64), rgba(2, 8, 36, 0.82)), url('../images/backgroundimage.jpeg');
+    background-image: linear-gradient(rgba(1, 6, 35, 0.62), rgba(2, 8, 36, 0.84)), url('../images/backgroundimage.jpeg');
     background-size: cover;
     left: 28%;
     bottom: 0;
@@ -153,18 +228,18 @@
     top: 2%;
     right: -14%;
     transform: rotate(-28deg);
-    animation: wave 3s infinite;
+    animation: wave 2s infinite;
     animation-delay: 0s;
 }
 
 @keyframes wave {
-    0%{
+    0% {
         transform: rotate(-28deg);
     }
-    50%{
+    50% {
         transform: rotate(-40deg);
     }
-    100%{
+    100% {
         transform: rotate(-28deg);
     }
 }
@@ -185,7 +260,8 @@
     color: white;
     position: absolute;
 }
-.word-name{
+
+.word-name {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 4px;
     color: aqua;
@@ -197,13 +273,13 @@
 }
 
 @keyframes glow {
-    from{
-      text-shadow: 0 0 2px rgba(134,228,233,1);
+    from {
+        text-shadow: 0 0 2px rgba(134, 228, 233, 1);
     }
-    to{
-        text-shadow: 0 0 2px rgba(134,228,233,0.5),
-                     1px 1px 6px rgba(134,228,233,0.5),
-                     0 1px 5px rgba(134,228,233,0.5);
+    to {
+        text-shadow: 0 0 2px rgba(134, 228, 233, 0.5),
+        1px 1px 6px rgba(134, 228, 233, 0.5),
+        0 1px 5px rgba(134, 228, 233, 0.5);
     }
 }
 
@@ -216,28 +292,29 @@
     font-weight: bold;
 }
 
-.first{
+.first {
     color: transparent;
     -webkit-text-stroke: 1px #03a9f4;
 }
-.second{
+
+.second {
     color: #03a9f4;
-    animation: water-effect 2s ease-in-out infinite;
+    animation: water-effect 1.8s ease-in-out infinite;
 }
 
- @keyframes water-effect {
-     0%,100%{
-         clip-path: polygon(0% 45%,15% 44%,32% 50%,54% 60%,70% 61%,84% 59%,100% 52%,100% 100%,0% 100%);
-     }
-      50% {
-          clip-path: polygon(0% 60%,16% 65%,34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%,0% 100%);
-      }
- }
+@keyframes water-effect {
+    0%, 100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
 
 .main-home p {
     top: 70%;
     left: 5%;
-    right:5%;
+    right: 5%;
     font-size: 22px;
     font-weight: 500;
     color: white;
@@ -245,39 +322,307 @@
     font-family: Calibri;
     position: absolute;
 }
+
 /*end of the home page*/
 
 /*start of the about me page*/
-.aboutMe{
-    width:calc(100vw - (100vw - 100%));
+.aboutMe {
+    width: calc(100vw - (100vw - 100%));
     height: 100vh;
-    background-color: #01011c;
+    background: linear-gradient(to bottom left, #04091F, #04091F, #130734, #04091F, #04091F);
     margin: 0;
 }
 
-.aboutMe-content h1{
+.box-area1 {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 1300px;
+    bottom: 0;
+    height: 738px;
+    overflow: hidden;
+}
+
+.box-area1 li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: box-animate1 10s linear infinite;
+    top: -80px;
+}
+
+.box-area1 li:nth-child(1) {
+    left: 40%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+
+
+.box-area1 li:nth-child(2) {
+    left: 12%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 1.5s;
+}
+
+.box-area1 li:nth-child(3) {
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 5.5s;
+}
+
+.box-area1 li:nth-child(4) {
+    left: 90%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box-area1 li:nth-child(5) {
+    left: 65%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 0s;
+}
+
+.box-area1 li:nth-child(6) {
+    left: 15%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 3.5s;
+}
+
+@keyframes box-animate1 {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(800px) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+
+.corner-image1 {
+    width: 150px;
+    right: 0;
+    position: absolute;
+    transform: rotate(270deg);
+}
+
+.corner-image2 {
+    width: 150px;
+    top: 180vh;
+    position: absolute;
+    transform: rotate(-270deg);
+}
+
+.aboutMe-content h1 {
     margin: 0;
-    color: white;
-    top:830px;
+    color: mediumpurple;
+    font-family: Calibri;
+    font-size: 40px;
+    top: 830px;
     left: 20px;
     position: absolute;
 }
 
-.aboutMe-image{
-    left: 450px;
-    top:1080px;
+.line {
+    width: 1200px;
+    height: 3px;
+    top: 855px;
+    left: 195px;
+    background-color: #3e88ba;
     position: absolute;
 }
 
-.aboutMe-content ul{
+.aboutMe-image {
+    left: 0;
+    top: 915px;
+    position: absolute;
+    width: 450px;
+}
+
+.line1 {
+    width: 400px;
+    height: 2px;
+    top: 950px;
+    left: 260px;
+    background-color: white;
+    position: absolute;
+}
+
+.name {
+    top: 938px;
+    left: 680px;
+    color: gold;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.my-name {
+    top: 936px;
+    left: 780px;
     margin: 0;
-    top:900px;
+    font-size: 28px;
+    font-family: Calibri;
+    color: whitesmoke;
     position: absolute;
-    color: white;
 }
 
-.aboutMe-content h3{
-    top:1100px;
+.line2 {
+    width: 282px;
+    height: 2px;
+    top: 1015px;
+    left: 380px;
+    background-color: white;
     position: absolute;
 }
+
+.birthday {
+    top: 1005px;
+    left: 680px;
+    color: #0be215;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.my-birthday {
+    top: 1005px;
+    left: 840px;
+    margin: 0;
+    font-size: 28px;
+    font-family: Calibri;
+    color: whitesmoke;
+    position: absolute;
+}
+
+.line3 {
+    width: 273px;
+    height: 2px;
+    top: 1080px;
+    left: 390px;
+    background-color: white;
+    position: absolute;
+}
+
+.city {
+    top: 1068px;
+    left: 682px;
+    color: aqua;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.my-city {
+    top: 1068px;
+    left: 778px;
+    margin: 0;
+    font-size: 28px;
+    font-family: Calibri;
+    color: whitesmoke;
+    position: absolute;
+}
+
+.line4 {
+    width: 285px;
+    height: 2px;
+    top: 1147px;
+    left: 378px;
+    background-color: white;
+    position: absolute;
+}
+
+.address {
+    top: 1136px;
+    left: 680px;
+    color: #4498f1;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.my-address {
+    top: 1136px;
+    left: 820px;
+    margin: 0;
+    font-size: 28px;
+    font-family: Calibri;
+    color: whitesmoke;
+    position: absolute;
+}
+
+.line5 {
+    width: 313px;
+    height: 2px;
+    top: 1218px;
+    left: 350px;
+    background-color: white;
+    position: absolute;
+}
+
+.number {
+    top: 1205px;
+    left: 680px;
+    color: #de2ef1;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.my-number {
+    top: 1205px;
+    left: 908px;
+    margin: 0;
+    font-size: 28px;
+    font-family: Calibri;
+    color: whitesmoke;
+    position: absolute;
+}
+
+.icons {
+    top: 1330px;
+    left: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 670px;
+}
+
+.button {
+    top: 1400px;
+    left: 1170px;
+    position: absolute;
+    background-color: #32b2ec;
+    color: #450345;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Calibri;
+    border-radius: 7px;
+    height: 50px;
+    width: 160px;
+    cursor: pointer;
+}
+
 /*end of the about me page*/
+
+/*start of the skills page*/
+.skills {
+    width: calc(100vw - (100vw - 100%));
+    height: 100vh;
+    background: linear-gradient(to bottom left, #04091F, #04091F, #130734, #04091F, #04091F);
+    margin: 0;
+}
+
+/*end of the skills page*/
