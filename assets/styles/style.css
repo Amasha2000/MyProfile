@@ -95,23 +95,23 @@
 
 .box-area li:nth-child(1) {
     left: 40%;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     animation-delay: 0s;
 }
 
 
 .box-area li:nth-child(2) {
     left: 12%;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     animation-delay: 1.5s;
 }
 
 .box-area li:nth-child(3) {
     left: 70%;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     animation-delay: 5.5s;
 }
 
@@ -168,7 +168,6 @@
     left: 28%;
     top: 58%;
     font-size: 40px;
-    /*transform: rotate(-40deg);*/
 }
 
 .main-home {
