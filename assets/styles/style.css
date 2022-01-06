@@ -434,11 +434,18 @@
 }
 
 .line {
-    width: 1200px;
+    width: 1150px;
     height: 3px;
     top: 855px;
-    left: 195px;
+    left: 250px;
     background-color: #3e88ba;
+    position: absolute;
+}
+
+.gif{
+    width: 50px;
+    top: 833px;
+    left: 195px;
     position: absolute;
 }
 
@@ -596,22 +603,37 @@
     display: flex;
     justify-content: space-between;
     height: 60px;
-    width: 670px;
+    width: 720px;
+}
+
+.icons a>img{
+    transition-duration:0.5s
+}
+
+.icons a>img:hover{
+    width: 70px;
+    transition: 0.5s;
 }
 
 .button {
-    top: 1400px;
-    left: 1170px;
-    position: absolute;
-    background-color: #32b2ec;
-    color: #450345;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: Calibri;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid aqua;
     border-radius: 7px;
-    height: 50px;
-    width: 160px;
-    cursor: pointer;
+    padding: 12px 34px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top:640px;
+    left: 1180px;
+    background-color: #03769a;
+    color: white;
+    transition-duration: 1.5s;;
+}
+
+.button:hover{
+    background: transparent;
+    transition: 1.5s;
 }
 
 /*end of the about me page*/
@@ -624,4 +646,304 @@
     margin: 0;
 }
 
+.skills .corner-image2{
+    top:280vh;
+}
+
+.skills .box-area1 {
+    position: absolute;
+    top: 200vh;
+    left: 0;
+    width: 1300px;
+    bottom: 0;
+    height: 738px;
+    overflow: hidden;
+}
+
+.skills .box-area1 li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: box-animate2 10s linear infinite;
+    top: -80px;
+}
+
+.skills .box-area1 li:nth-child(1) {
+    left: 40%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+
+
+.skills .box-area1 li:nth-child(2) {
+    left: 12%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 1.5s;
+}
+
+.skills .box-area1 li:nth-child(3) {
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 5.5s;
+}
+
+.skills .box-area1 li:nth-child(4) {
+    left: 90%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.skills .box-area1 li:nth-child(5) {
+    left: 65%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 0s;
+}
+
+.skills .box-area1 li:nth-child(6) {
+    left: 15%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 3.5s;
+}
+
+@keyframes box-animate2 {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(800px) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+.skills h1{
+    margin: 0;
+    color: mediumpurple;
+    font-family: Calibri;
+    font-size: 40px;
+    top: 1590px;
+    left: 20px;
+    position: absolute;
+}
+
+.skills .gif{
+    width: 50px;
+    top: 72px;
+    left: 110px;
+    position: relative;
+}
+
+.skills .line{
+    width: 1210px;
+    height: 3px;
+    top: 1615px;
+    left: 170px;
+    background-color: #3e88ba;
+    position: absolute;
+}
+
+.skills .images{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 10vh;
+    top:170px;
+    margin: 0;
+    position: relative;
+}
+
+.skills .image-box{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: slide 80s linear infinite;
+}
+
+@keyframes slide {
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.image-box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+
+.image-box span img{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.skills-img{
+    position: relative;
+    width:250px;
+    left:1000px;
+}
+
+.skills li{
+    list-style: none;
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+    font-size: 13px;
+    width: 600px;
+    left:250px;
+    top:240px;
+    position: relative;
+}
+
+.skills .bar{
+    background-color: #2187e7;
+    display: block;
+    height: 5px;
+    border: 1px solid rgba(0,0,0,3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px aqua;
+}
+
+.bar span{
+    height: 5px;
+    float: left;
+    background: aqua;
+}
+
+.html{
+    width: 90%;
+    animation: html 2s;
+}
+
+.css{
+    width: 80%;
+    animation: css 2s;
+}
+.java{
+    width: 90%;
+    animation: java 2s;
+}
+.javafx{
+    width: 80%;
+    animation: javafx 2s;
+}
+
+.mysql{
+    width: 80%;
+    animation: mysql 2s;
+}
+
+.hibernate{
+    width: 90%;
+    animation: hibernate 2s;
+}
+
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+
+@keyframes java {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+
+@keyframes javafx {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+
+@keyframes mysql {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+
+@keyframes hibernate {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
 /*end of the skills page*/
+
+/*start of the experience page*/
+.experience{
+    width: calc(100vw - (100vw - 100%));
+    height: 100vh;
+    background: linear-gradient(to bottom left, #04091F, #04091F, #130734, #04091F, #04091F);
+    margin: 0;
+}
+
+.experience .corner-image2{
+    position: relative;
+    top:607px;
+}
+
+.experience-content h1{
+    top: -85px;
+    left: 20px;
+    position: relative;
+    color: mediumpurple;
+    font-family: Calibri;
+    font-size: 40px;
+    margin: 0;
+    display: inline;
+}
+/*end of the experience page*/
