@@ -628,7 +628,7 @@
     left: 1180px;
     background-color: #03769a;
     color: white;
-    transition-duration: 1.5s;;
+    transition-duration: 1.5s;
 }
 
 .button:hover{
@@ -1230,6 +1230,80 @@
     left: 240px;
     background-color: #3e88ba;
     position: relative;
+}
+
+.projects .box-container{
+    top:40px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.projects .card{
+    width: calc(20% - 20px);
+    height: 250px;
+    background: #33d2ee;
+    border: 2px solid blue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.projects .card i{
+    font-size: 60px;
+    color: #6a026a;
+}
+
+.projects .card .text{
+    font-size: 23px;
+    font-weight: 550;
+    margin: 10px 0 7px 0;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    font-family: sans-serif;
+    color: #04045a;
+}
+
+.projects .card:hover{
+    transition: 1s;
+    background: white;
+}
+
+.projects .card .btn{
+    margin: 20px;
+    padding: 10px 15px 10px 15px;
+    text-decoration:none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Calibri;
+    background: #030880;
+    color: white;
+    border: 1px solid #010144;
+    border-radius: 6px;
+    transition-duration: 1.5s;
+}
+
+.projects .card .btn:hover{
+    background: transparent;
+    color: #031e5f;
+    transition: 1.5s;
+}
+
+.projects .programmer-img{
+    left:950px;
+    top:60px;
+    position: relative;
+    width: 300px;
+}
+
+.projects .star-gif{
+    top:30px;
+    left: 920px;
+    position: relative;
+    width: 100px;
 }
 
 
