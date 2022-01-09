@@ -802,7 +802,7 @@
 
 .skills-img{
     position: relative;
-    width:250px;
+    width:230px;
     left:1000px;
 }
 
@@ -812,16 +812,16 @@
     color: white;
     font-family: sans-serif;
     font-size: 13px;
-    width: 600px;
+    width: 550px;
     left:250px;
-    top:240px;
+    top:220px;
     position: relative;
 }
 
 .skills .bar{
-    background-color: #2187e7;
+    background-color: #023361;
     display: block;
-    height: 5px;
+    height: 8px;
     border: 1px solid rgba(0,0,0,3);
     border-radius: 3px;
     overflow: hidden;
@@ -829,7 +829,7 @@
 }
 
 .bar span{
-    height: 5px;
+    height: 8px;
     float: left;
     background: aqua;
 }
@@ -1099,13 +1099,13 @@
     font-weight: 500;
     margin-bottom: 0;
     letter-spacing: 1px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .experience .row .column .box  p{
     color: #9cdffa;
     font-family: Calibri;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .experience .success-gif{
@@ -1233,7 +1233,7 @@
 }
 
 .projects .box-container{
-    top:40px;
+    top:10px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -1242,18 +1242,17 @@
 
 .projects .card{
     width: calc(20% - 20px);
-    height: 250px;
-    background: #33d2ee;
+    height: 270px;
+    background: linear-gradient(#2addf5, #aa87eb);
     border: 2px solid blue;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
     cursor: pointer;
-    transition-duration: 1s;
 }
 
 .projects .card i{
-    font-size: 60px;
+    font-size: 65px;
     color: #6a026a;
 }
 
@@ -1265,11 +1264,6 @@
     padding-bottom: 60px;
     font-family: sans-serif;
     color: #04045a;
-}
-
-.projects .card:hover{
-    transition: 1s;
-    background: white;
 }
 
 .projects .card .btn{
@@ -1294,13 +1288,13 @@
 
 .projects .programmer-img{
     left:950px;
-    top:60px;
+    top:40px;
     position: relative;
     width: 300px;
 }
 
 .projects .star-gif{
-    top:30px;
+    top:10px;
     left: 920px;
     position: relative;
     width: 100px;
