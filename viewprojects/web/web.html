@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/logo.jpg">
+    <title>My Web Applications</title>
+    <style>
+
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#9393f1, aqua);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(#f58dc3, #e82334);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100vw;
+            height: 270vh;
+            background: repeating-linear-gradient(to left, #030113, #020c26, #020c26, #030113);
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: aqua;
+            font-size: 40px;
+            text-align: center;
+            font-family: Roboto;
+            letter-spacing: 20px;
+            word-spacing: 30px;
+        }
+
+        u {
+            color: #c578ef;
+        }
+
+        .container {
+            top: 150px;
+            left: 110px;
+            position: absolute;
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            grid-gap: 70px;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns:400px;
+            grid-template-rows: 200px 100px 100px;
+            grid-template-areas: "card-image" "card-text" "card-button";
+            font-family: Roboto;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(0.9);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .image-one {
+            grid-area: card-image;
+            background-image: url("assets/image-1.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-two {
+            grid-area: card-image;
+            background-image: url("assets/image-2.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-three {
+            grid-area: card-image;
+            background-image: url("assets/image-3.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-four {
+            grid-area: card-image;
+            background-image: url("assets/image-4.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-five {
+            grid-area: card-image;
+            background-image: url("assets/image-5.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-six {
+            grid-area: card-image;
+            background-image: url("assets/image-6.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-seven {
+            grid-area: card-image;
+            background-image: url("assets/image-7.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-eight {
+            grid-area: card-image;
+            background-image: url("assets/image-9.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-nine {
+            grid-area: card-image;
+            background-image: url("assets/image-8.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .image-ten {
+            grid-area: card-image;
+            background-image: url("assets/image-10.png");
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+
+        .text {
+            grid-area: card-text;
+            margin: 5px;
+            font-size: 16px;
+            font-family: Calibri;
+        }
+
+        .text p {
+            font-size: 17px;
+        }
+
+        .btn {
+            margin: 40px;
+            width: 100px;
+            height: 20px;
+            left: 24.8%;
+            position: relative;
+            grid-area: card-button;
+            border-radius: 10px;
+            padding: 10px 10px 10px 10px;
+            background: #1a95e2;
+            border: 1px solid darkblue;
+            transition-duration: 1.5s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: transparent;
+            transition: 1.5s;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: #01012b;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .box-area1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1300px;
+            height: 270vh;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .box-area1 li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: box-animate1 20s linear infinite;
+            top: -100px;
+        }
+
+        .box-area1 li:nth-child(1) {
+            left: 40%;
+            width: 70px;
+            height: 70px;
+            animation-delay: 1s;
+        }
+
+
+        .box-area1 li:nth-child(2) {
+            left: 12%;
+            width: 100px;
+            height: 100px;
+            animation-delay: 6.5s;
+        }
+
+        .box-area1 li:nth-child(3) {
+            left: 70%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 12.5s;
+        }
+
+        .box-area1 li:nth-child(4) {
+            left: 90%;
+            width: 70px;
+            height: 70px;
+            animation-delay: 5.5s;
+        }
+
+        .box-area1 li:nth-child(5) {
+            left: 65%;
+            width: 90px;
+            height: 90px;
+            animation-delay: 10s;
+        }
+
+        .box-area1 li:nth-child(6) {
+            left: 15%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes box-animate1 {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(270vh) rotate(360deg);
+                opacity: 1;
+            }
+        }
+
+        @media all and (min-width: 320px) and (max-width: 500px) {
+            h1 {
+                display: none;
+            }
+
+            .container {
+                top: 90px;
+                left: 80px;
+                grid-template-columns:repeat(1, 1fr);
+                grid-gap: 30px;
+            }
+
+            .card {
+                grid-template-columns:200px;
+                grid-template-rows: 100px 50px 100px;
+            }
+
+            .text {
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            .text p {
+                font-size: 15px;
+            }
+
+            .btn {
+                margin: 40px;
+                width: 100px;
+                height: 20px;
+                left: 4%;
+            }
+
+
+            .btn a {
+                font-size: 15px;
+            }
+        }
+
+        @media all and (min-width: 500px) and (max-width: 769px) {
+            h1 {
+                display: none;
+            }
+
+            .container {
+                top: 90px;
+                left: 70px;
+                grid-template-columns:repeat(2, 1fr);
+                grid-gap: 30px;
+            }
+
+            .card {
+                grid-template-columns:200px;
+                grid-template-rows: 100px 50px 100px;
+            }
+
+            .text {
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            .text p {
+                font-size: 15px;
+            }
+
+            .btn {
+                margin: 40px;
+                width: 100px;
+                height: 20px;
+                left: 4%;
+            }
+
+
+            .btn a {
+                font-size: 15px;
+            }
+        }
+
+        @media all and (min-width: 769px) and (max-width: 1025px) {
+            h1 {
+                display: none;
+            }
+
+            .container {
+                top: 90px;
+                left: 80px;
+                grid-template-columns:repeat(3, 1fr);
+                grid-gap: 30px;
+            }
+
+            .card {
+                grid-template-columns:300px;
+                grid-template-rows: 150px 50px 100px;
+            }
+
+            .text {
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            .text p {
+                font-size: 15px;
+            }
+
+            .btn {
+                margin: 40px;
+                width: 100px;
+                height: 20px;
+                left: 16%;
+            }
+
+
+            .btn a {
+                font-size: 15px;
+            }
+        }
+
+        @media all and (min-width: 1025px) and (max-width: 1439px) {
+            h1 {
+                display: none;
+            }
+
+            .container {
+                top: 90px;
+                left: 80px;
+                grid-template-columns:repeat(3, 1fr);
+                grid-gap: 30px;
+            }
+
+            .card {
+                grid-template-columns:300px;
+                grid-template-rows: 150px 50px 100px;
+            }
+
+            .text {
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            .text p {
+                font-size: 15px;
+            }
+
+            .btn {
+                margin: 40px;
+                width: 100px;
+                height: 20px;
+                left: 16%;
+            }
+
+
+            .btn a {
+                font-size: 15px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<ul class="box-area1">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<u><h1>WEB APPLICATIONS</h1></u>
+<div class="container">
+    <div class="card">
+        <div class="image-one"></div>
+        <div class="text">
+            <h2>Simple Layouts</h2>
+            <p> HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-1/case-1.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-two"></div>
+        <div class="text">
+            <h2>Simple Layouts</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-2/case-2.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-two"></div>
+        <div class="text">
+            <h2>Simple Layouts-Responsive Version</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-2_responsive-version/case-2-responsive.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-three"></div>
+        <div class="text">
+            <h2>Simple Layouts</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-3/case-3.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-four"></div>
+        <div class="text">
+            <h2>Simple Layouts</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-4/case-4.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-five"></div>
+        <div class="text">
+            <h2>Navigation Transition</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-5/case-5.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-six"></div>
+        <div class="text">
+            <h2>Circle Border Transition</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-6/case-6.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-seven"></div>
+        <div class="text">
+            <h2>Basic Rotation with Animation</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-7/case-7.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-eight"></div>
+        <div class="text">
+            <h2>Water Drop Animation</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-9/case-9.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-nine"></div>
+        <div class="text">
+            <h2>Slider Animation</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-8/case-8.html" target="_blank">View</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-ten"></div>
+        <div class="text">
+            <h2>Car Animation</h2>
+            <p>HTML,CSS</p>
+        </div>
+        <div class="btn">
+            <a href="../../myprojects/css/case-10/case-10.html" target="_blank">View</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
