@@ -17,14 +17,14 @@ html {
 }
 
 body {
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 /*start of the home page*/
 .home {
     width: calc(100vw - (100vw - 100%));
-    height: 97vh;
-
+    height: 100vh;
+    position: relative;
 }
 
 .nav-links {
@@ -36,6 +36,10 @@ body {
     background-color: #111111;
     position: fixed;
     z-index: 8;
+}
+
+nav .fa {
+    display: none;
 }
 
 .nav-image {
@@ -417,7 +421,6 @@ body {
         opacity: 1;
     }
 }
-
 
 .corner-image1 {
     width: 150px;
@@ -979,7 +982,7 @@ body {
 }
 
 .experience-content h1 {
-    top: -85px;
+    top: -75px;
     left: 20px;
     position: relative;
     color: mediumpurple;
@@ -1025,7 +1028,7 @@ body {
 
 
 .experience .row {
-    top: 328vh;
+    top: 320vh;
     left: 200px;
     position: absolute;
     display: flex;
@@ -1334,14 +1337,15 @@ body {
 /*start of the contact me page*/
 .contactMe {
     width: calc(100vw - (100vw - 100%));
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(to bottom left, #04091F, #04091F, #130734, #04091F, #04091F);
-    margin: 0;
+    position: absolute;
+    overflow: hidden;
 }
 
 .contactMe .corner-image2 {
     position: relative;
-    top: 607px;
+    bottom: 0;
 }
 
 .contactMe .box-area1 {
@@ -1350,7 +1354,7 @@ body {
     left: 0;
     width: 1300px;
     bottom: 0;
-    height: 738px;
+    height: 538px;
     overflow: hidden;
 }
 
@@ -1553,14 +1557,16 @@ body {
     font-size: 18px;
 }
 
-footer {
-    position: relative;
+.contactMe > footer {
     left: 0;
     right: 0;
-    top: 60px;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    padding: 10px 10px 0px 10px;
+    width: 100%;
     background: linear-gradient(#020238, #0303ac, #1a95e2);
-    min-height: 10px;
-    padding: 5px 10px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1569,7 +1575,7 @@ footer {
 footer h3 {
     color: white;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /*end of the contact me page*/
@@ -1577,13 +1583,10 @@ footer h3 {
 /*start of the media queries*/
 @media all and (max-width: 481px) {
     /*start of the home page*/
-    .home {
-        height: 100vh;
-    }
-
     .side-bar {
-        top: -320px;
-        height: 250px;
+        top: 100px;
+        position: relative;
+        height: 260px;
         width: calc(100vw - (100vw - 100%));
         margin: auto;
     }
@@ -1593,7 +1596,7 @@ footer h3 {
     }
 
     .nav-image {
-        width: 50px;
+        width: 100px;
         left: 0;
         right: 0;
         margin: auto;
@@ -1601,12 +1604,34 @@ footer h3 {
     }
 
     .nav-links ul li {
-        top: 30px;
-        padding: 0 5px 10px 5px;
+        top: 70px;
+        padding: 20px 5px 10px 5px;
+        display: block;
     }
 
     .nav-links ul li a {
-        font-size: 11px;
+        font-size: 15px;
+        color: white;
+    }
+
+    .menu {
+        position: absolute;
+        background: linear-gradient(#a14cf5, #4cbae7);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 22px;
     }
 
     .my-image {
@@ -1615,6 +1640,7 @@ footer h3 {
 
     .main-home {
         left: 0;
+        bottom: 0;
         top: 320px;
     }
 
@@ -1661,9 +1687,14 @@ footer h3 {
         width: 70px;
     }
 
+    .aboutMe .corner-image1 {
+        top: 100vh;
+        width: 70px;
+    }
+
     .corner-image2 {
         width: 70px;
-        top: 189vh;
+        top: 191vh;
     }
 
     .aboutMe-content h1 {
@@ -1868,7 +1899,7 @@ footer h3 {
         width: 250px;
         height: 3px;
         top: 55px;
-        left: -80px;
+        left: -100px;
         display: inline-block;
     }
 
@@ -1911,10 +1942,6 @@ footer h3 {
 
     /*end of the projects page*/
     /*start of the contact me page*/
-    .contactMe .corner-image2 {
-        top: 670px;
-    }
-
     .contactMe-content h1 {
         top: 40px;
         font-size: 30px;
@@ -1953,9 +1980,6 @@ footer h3 {
         font-size: 30px;
     }
 
-    footer > h3 {
-        font-size: 12px;
-    }
 
     /*end of the contact me page*/
 }
@@ -1967,22 +1991,6 @@ footer h3 {
 
     .projects .star-gif {
         display: none;
-    }
-
-    footer {
-        top: 100px;
-    }
-}
-
-@media all and (min-width: 358px) and (max-width: 437px) {
-    footer {
-        top: 115px;
-    }
-}
-
-@media all and (min-width: 437px) and (max-width: 481px) {
-    footer {
-        top: 115px;
     }
 }
 
@@ -2023,10 +2031,6 @@ footer h3 {
 
     .contactMe .box-area1 {
         width: 300px;
-    }
-
-    .nav-links ul li:nth-child(5) {
-        padding-left: 55px;
     }
 
     .my-name {
@@ -2079,14 +2083,6 @@ footer h3 {
 }
 
 @media all and (min-width: 375px) and (max-width: 432px) {
-    .nav-links ul {
-        padding-left: 70px;
-    }
-
-    .nav-links ul li:nth-child(5) {
-        padding-left: 52px;
-    }
-
     .my-name {
         font-size: 13px;
     }
@@ -2144,23 +2140,23 @@ footer h3 {
     }
 
     .aboutMe .box-area1 {
-        width: 300px;
+        width: 350px;
     }
 
     .skills .box-area1 {
-        width: 300px;
+        width: 350px;
     }
 
     .experience .box-area1 {
-        width: 300px;
+        width: 350px;
     }
 
     .projects .box-area1 {
-        width: 300px;
+        width: 350px;
     }
 
     .contactMe .box-area1 {
-        width: 300px;
+        width: 350px;
     }
 
 }
@@ -2188,14 +2184,6 @@ footer h3 {
 
     .contactMe .box-area1 {
         width: 400px;
-    }
-
-    .nav-links ul {
-        padding-left: 90px;
-    }
-
-    .nav-links ul li:nth-child(5) {
-        padding-left: 52px;
     }
 
     .my-name {
@@ -2249,16 +2237,10 @@ footer h3 {
         top: 170px;
         display: inline-block;
     }
-
 }
-
 
 @media all and (min-width: 481px) and (max-width: 600px) {
     /*start of the  home page*/
-    .home {
-        height: 100vh;
-    }
-
     .side-bar .box-area {
         width: 420px;
     }
@@ -2284,7 +2266,8 @@ footer h3 {
     }
 
     .side-bar {
-        top: -390px;
+        top: 70px;
+        position: relative;
         height: 255px;
         width: 100vw;
         margin: auto;
@@ -2351,7 +2334,7 @@ footer h3 {
 
     .corner-image2 {
         width: 70px;
-        top: 189vh;
+        top: 185vh;
     }
 
     .aboutMe-content h1 {
@@ -2437,7 +2420,7 @@ footer h3 {
     /*end of the about me page*/
     /*start of the skills page*/
     .skills .corner-image2 {
-        top: 290vh;
+        top: 280vh;
     }
 
     .skills h1 {
@@ -2616,10 +2599,6 @@ footer h3 {
 
     /*end of the projects page*/
     /*start of the contact me page*/
-    .contactMe .corner-image2 {
-        top: 670px;
-    }
-
     .contactMe-content h1 {
         top: -10px;
         font-size: 30px;
@@ -2657,20 +2636,12 @@ footer h3 {
         font-size: 30px;
     }
 
-    footer {
-        top: 97px;
-    }
-
     /*end of the contact me page*/
 
 }
 
 @media all and (min-width: 601px) and (max-width: 767px) {
     /*start of the home page*/
-    .home {
-        height: 100vh;
-    }
-
     .side-bar .box-area {
         width: 100px;
     }
@@ -3016,10 +2987,6 @@ footer h3 {
 
     /*end of the projects page*/
     /*start of the contact me page*/
-    .contactMe .corner-image2 {
-        top: 670px;
-    }
-
     .contactMe-content h1 {
         top: -10px;
         font-size: 30px;
@@ -3072,9 +3039,6 @@ footer h3 {
         font-size: 30px;
     }
 
-    footer {
-        top: 70px;
-    }
 
     /*end of the contact me page*/
 }
@@ -3437,8 +3401,8 @@ footer h3 {
 
 @media all and (min-width: 767px) and (max-width: 1270px) {
     /*start of the home page*/
-    .home {
-        height: 100vh;
+    .nav-links > i {
+        display: none;
     }
 
     .nav-links ul li {
@@ -3606,10 +3570,6 @@ footer h3 {
     .container .contactInfo .box .text {
         margin-left: 5px;
         font-size: 11px;
-    }
-
-    footer {
-        top: 85px;
     }
 
     /*end of the contact me page*/

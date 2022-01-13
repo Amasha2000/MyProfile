@@ -18,7 +18,8 @@
         </div>
         <nav class="nav-links">
             <a href=""><img class="nav-image" src="assets/icons/logo.jpg" alt="Logo"></a>
-            <div class="menu">
+            <div class="menu" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#aboutMe">ABOUT ME</a></li>
@@ -28,10 +29,10 @@
                     <li><a href="#contactMe">CONTACT ME</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
-    <main>
-        <section class="main-home">
+    <section class="main-home">
             <img class="wave-hand-image" src="assets/images/wave-image.png" alt="wave-hand">
             <span class="star"></span>
             <h2>Hi!</h2>
@@ -42,7 +43,7 @@
             Applications with intuitive functionality.I enjoy the process of turning ideas
             into reality using creative solutions.And also I'm curious about learning new
             skills,tools & concepts.</p>
-        </section>
+    </section>
         <section class="side-bar">
                 <ul class="box-area">
                     <li></li>
@@ -55,7 +56,6 @@
             <img class="my-image" src="assets/images/myimage.png" alt="myimage">
             <h3>Welcome<br>To<br>My Space</h3>
         </section>
-    </main>
 </section>
     <section class="aboutMe" id="aboutMe">
         <ul class="box-area1">
@@ -286,9 +286,17 @@
         </footer>
     </section>
 
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
 
-
-</body>
+  </body>
 </html>
 
 
