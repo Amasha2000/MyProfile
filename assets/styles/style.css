@@ -1578,7 +1578,7 @@ footer h3 {
 @media all and (max-width: 481px) {
     /*start of the home page*/
     .home {
-        height: 97.79vh;
+        height: 100vh;
     }
 
     .side-bar {
@@ -2006,23 +2006,23 @@ footer h3 {
     }
 
     .aboutMe .box-area1 {
-        width: 250px;
+        width: 300px;
     }
 
     .skills .box-area1 {
-        width: 250px;
+        width: 300px;
     }
 
     .experience .box-area1 {
-        width: 250px;
+        width: 300px;
     }
 
     .projects .box-area1 {
-        width: 250px;
+        width: 300px;
     }
 
     .contactMe .box-area1 {
-        width: 250px;
+        width: 300px;
     }
 
     .nav-links ul li:nth-child(5) {
@@ -2171,23 +2171,23 @@ footer h3 {
     }
 
     .aboutMe .box-area1 {
-        width: 380px;
+        width: 400px;
     }
 
     .skills .box-area1 {
-        width: 380px;
+        width: 400px;
     }
 
     .experience .box-area1 {
-        width: 380px;
+        width: 400px;
     }
 
     .projects .box-area1 {
-        width: 380px;
+        width: 400px;
     }
 
     .contactMe .box-area1 {
-        width: 380px;
+        width: 400px;
     }
 
     .nav-links ul {
@@ -2256,7 +2256,7 @@ footer h3 {
 @media all and (min-width: 481px) and (max-width: 600px) {
     /*start of the  home page*/
     .home {
-        height: 97.79vh;
+        height: 100vh;
     }
 
     .side-bar .box-area {
@@ -2264,23 +2264,23 @@ footer h3 {
     }
 
     .aboutMe .box-area1 {
-        width: 400px;
+        width: 450px;
     }
 
     .skills .box-area1 {
-        width: 400px;
+        width: 450px;
     }
 
     .experience .box-area1 {
-        width: 400px;
+        width: 450px;
     }
 
     .projects .box-area1 {
-        width: 400px;
+        width: 450px;
     }
 
     .contactMe .box-area1 {
-        width: 400px;
+        width: 450px;
     }
 
     .side-bar {
@@ -2668,7 +2668,7 @@ footer h3 {
 @media all and (min-width: 601px) and (max-width: 767px) {
     /*start of the home page*/
     .home {
-        height: 97.79vh;
+        height: 100vh;
     }
 
     .side-bar .box-area {
@@ -3438,7 +3438,7 @@ footer h3 {
 @media all and (min-width: 767px) and (max-width: 1270px) {
     /*start of the home page*/
     .home {
-        height: 97.79vh;
+        height: 100vh;
     }
 
     .nav-links ul li {
