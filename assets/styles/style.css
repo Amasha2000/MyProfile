@@ -1350,11 +1350,11 @@ nav .fa {
 
 .contactMe .box-area1 {
     position: absolute;
-    top: 500vh;
+    top: 0;
     left: 0;
     width: 1300px;
     bottom: 0;
-    height: 538px;
+    height: 700px;
     overflow: hidden;
 }
 
@@ -1957,7 +1957,7 @@ footer h3 {
     .contactMe .gif {
         top: 80px;
         width: 40px;
-        left: 90px;
+        left: 100px;
         position: relative;
     }
 
@@ -2613,7 +2613,7 @@ footer h3 {
     .contactMe .gif {
         top: 35px;
         width: 40px;
-        left: 95px;
+        left: 105px;
         position: relative;
     }
 
