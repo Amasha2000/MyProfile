@@ -1028,7 +1028,7 @@ nav .fa {
 
 
 .experience .row {
-    top: 320vh;
+    top: 325vh;
     left: 200px;
     position: absolute;
     display: flex;
@@ -1616,7 +1616,7 @@ footer h3 {
 
     .menu {
         position: absolute;
-        background: linear-gradient(#a14cf5, #4cbae7);
+        background: linear-gradient(#450684, #4cbae7);
         height: 100vh;
         width: 200px;
         top: 0;
@@ -1711,7 +1711,7 @@ footer h3 {
     .line {
         width: 300px;
         top: 80px;
-        left: -100px;
+        left: -120px;
         display: inline-block;
     }
 
@@ -1728,48 +1728,48 @@ footer h3 {
     .details {
         top: -20px;
         left: 10px;
-        width: 250px;
+        width: 300px;
         height: 300px;
     }
 
     .my-name {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .name {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .my-birthday {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .birthday {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .my-city {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .city {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .my-address {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .address {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .my-number {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .number {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .icons a > img {
@@ -1851,7 +1851,7 @@ footer h3 {
     }
 
     .experience .row {
-        top: 326vh;
+        top: 330vh;
         left: 20px;
     }
 
@@ -1948,9 +1948,9 @@ footer h3 {
     }
 
     .contactMe-content .line {
-        width: 300px;
+        width: 350px;
         top: 50px;
-        left: -100px;
+        left: -150px;
         display: inline-block;
     }
 
@@ -2034,7 +2034,7 @@ footer h3 {
     }
 
     .my-name {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .name {
@@ -2042,7 +2042,7 @@ footer h3 {
     }
 
     .my-birthday {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .birthday {
@@ -2050,7 +2050,7 @@ footer h3 {
     }
 
     .my-city {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .city {
@@ -2058,7 +2058,7 @@ footer h3 {
     }
 
     .my-address {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .address {
@@ -2066,7 +2066,7 @@ footer h3 {
     }
 
     .my-number {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .number {
@@ -2088,7 +2088,7 @@ footer h3 {
     }
 
     .name {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .my-birthday {
@@ -2096,7 +2096,7 @@ footer h3 {
     }
 
     .birthday {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .my-city {
@@ -2104,7 +2104,7 @@ footer h3 {
     }
 
     .city {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .my-address {
@@ -2112,7 +2112,7 @@ footer h3 {
     }
 
     .address {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .my-number {
@@ -2120,18 +2120,18 @@ footer h3 {
     }
 
     .number {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .details {
-        width: 260px;
+        width: 360px;
     }
 
     .skills li {
         font-size: 9px;
         width: 250px;
         left: 55px;
-        top: 170px;
+        top: 200px;
         display: inline-block;
     }
 
@@ -2187,11 +2187,11 @@ footer h3 {
     }
 
     .my-name {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .name {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .my-birthday {
@@ -2234,7 +2234,7 @@ footer h3 {
         font-size: 9px;
         width: 250px;
         left: 90px;
-        top: 170px;
+        top: 210px;
         display: inline-block;
     }
 }
@@ -2435,9 +2435,9 @@ footer h3 {
     }
 
     .skills .line {
-        width: 270px;
+        width: 300px;
         top: 70px;
-        left: 10px;
+        left: -70px;
     }
 
     .skills .images {
@@ -2486,9 +2486,9 @@ footer h3 {
     }
 
     .experience .line {
-        width: 400px;
+        width: 450px;
         top: 20px;
-        left: 10px;
+        left: -100px;
     }
 
     .rocket {
@@ -2496,7 +2496,7 @@ footer h3 {
     }
 
     .experience .row {
-        top: 323vh;
+        top: 325vh;
         left: 20px;
     }
 
@@ -2542,10 +2542,10 @@ footer h3 {
     }
 
     .projects-content .line {
-        width: 400px;
+        width: 450px;
         height: 3px;
         top: 5px;
-        left: 10px;
+        left: -100px;
     }
 
     .projects .box-container {
@@ -2605,9 +2605,9 @@ footer h3 {
     }
 
     .contactMe-content .line {
-        width: 430px;
+        width: 450px;
         top: 10px;
-        left: 10px;
+        left: -100px;
     }
 
     .contactMe .gif {
@@ -2888,7 +2888,7 @@ footer h3 {
     }
 
     .experience .row {
-        top: 320vh;
+        top: 322vh;
         left: 20px;
     }
 
