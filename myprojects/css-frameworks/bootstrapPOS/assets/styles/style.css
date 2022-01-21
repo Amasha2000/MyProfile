@@ -1,0 +1,37 @@
+nav{
+    background-color: #c06de3;
+}
+
+#nav-content{
+    right: 0;
+    position: absolute;
+}
+
+.navbar-nav li{
+    padding-left: 30px;
+    font-weight: 500;
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+}
+
+#nav-content a{
+    transition-duration: 0.5s;
+}
+
+#nav-content a:hover{
+    color: aqua;
+    transition: 0.5s;
+}
+
+nav>div>span{
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    color: #02024b;
+}
+
+.customer-topic{
+    position:absolute;
+    left:5%;
+    top:12%;
+}
