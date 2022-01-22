@@ -11,7 +11,7 @@ nav{
     padding-left: 30px;
     font-weight: 500;
     font-family: "Comic Sans MS";
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #nav-content a{
@@ -30,8 +30,38 @@ nav>div>span{
     color: #02024b;
 }
 
-.customer-topic{
-    position:absolute;
-    left:5%;
-    top:12%;
+.customer-topic img{
+    position: relative;
+    left: 10px;
+    top: 100px;
+}
+
+.customer-topic h3 {
+    position: relative;
+    left: 24px;
+    top: 105px;
+    display: inline;
+}
+
+.customer-buttons{
+    position: relative;
+    top:120px;
+    left:10px;
+    display: inline-block;
+}
+
+main{
+    position: relative;
+    top:140px;
+}
+
+.table td{
+    /*width: 25%;*/
+    /*float: left;*/
+    word-break: break-word;
+    /*padding-left: 10px;*/
+}
+
+#customer-table{
+    padding: 5px;
 }
