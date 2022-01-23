@@ -31,6 +31,51 @@ nav>div>span{
     color: #02024b;
 }
 
+.icons {
+    width: 228px;
+    height: 90px;
+    top: 85px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    right: 0;
+}
+
+.icons div {
+    right: -180px;
+    height: 35px;
+    position: relative;
+    background: #a55aef;
+    color: white;
+    display: inline;
+    box-shadow: 1px 2px 3px 2px #3a483b;
+    transition-duration: 3s;
+}
+
+.icons  div > h3 {
+    position:absolute;
+    left:100px;
+    margin: 0;
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.icons  div > i {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    font-size: 20px;
+}
+
+.icon-div:hover{
+    background: #2772fa;
+    right: 1px;
+    cursor: pointer;
+    transition: all 3s;
+}
+
 .customer-topic img{
     position: relative;
     left: 10px;
@@ -200,24 +245,24 @@ nav>div>span{
 .order-topic img{
     position: relative;
     left: 10px;
-    top: 80px;
+    top: 90px;
 }
 
 .order-topic h3 {
     position: relative;
     left: 24px;
-    top: 85px;
+    top: 95px;
     display: inline;
 }
 
 #first-row{
     position: relative;
-    top:100px;
+    top:130px;
 }
 
 #second-row{
     position:relative;
-    top:120px;
+    top:150px;
 }
 
 #top-order-invoice{
@@ -246,6 +291,10 @@ nav>div>span{
 #top-select-item h5{
     text-align: center;
     color: white;
+}
+
+#billing-area{
+    background-color: white;
 }
 
 #billing-area h5:first-child{
