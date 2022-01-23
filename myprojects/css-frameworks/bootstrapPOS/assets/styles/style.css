@@ -1,3 +1,4 @@
+/*navigation styles*/
 nav{
     background-color: #c06de3;
 }
@@ -53,10 +54,11 @@ nav>div>span{
 #customer-container{
     position: relative;
     top: 140px;
+    height:70vh;
     overflow: overlay;
 }
 
-.table td{
+.table td,.table th{
     word-break: break-word;
 }
 
@@ -119,10 +121,11 @@ nav>div>span{
     margin: 15px;
 }
 
-/*==========================================================================*/
+/*=========================Item Page Styles=============================*/
 #item-page{
     position: relative;
     top:100px;
+    height: 100vh;
 }
 
 .item-topic img{
@@ -148,7 +151,8 @@ nav>div>span{
 #item-container{
     position: relative;
     top:130px;
-    /*overflow: overlay;*/
+    height:70vh;
+    overflow: overlay;
 }
 
 #item-table{
@@ -186,3 +190,75 @@ nav>div>span{
 #item-search-area{
     position: relative;
 }
+
+/*==============================Order Page Styles====================================*/
+#order-page{
+    position: relative;
+    height: 100vh;
+}
+
+.order-topic img{
+    position: relative;
+    left: 10px;
+    top: 80px;
+}
+
+.order-topic h3 {
+    position: relative;
+    left: 24px;
+    top: 85px;
+    display: inline;
+}
+
+#first-row{
+    position: relative;
+    top:100px;
+}
+
+#second-row{
+    position:relative;
+    top:120px;
+}
+
+#top-order-invoice{
+    width:100%;
+    height: 40px;
+    background-color: #1f62b4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top-order-invoice h5{
+    text-align: center;
+    color: white;
+}
+
+#top-select-item{
+    width:100%;
+    height: 40px;
+    background-color: #34a159;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top-select-item h5{
+    text-align: center;
+    color: white;
+}
+
+#billing-area{
+    /*background: linear-gradient(#9de36c, #63a84c);*/
+    /*padding-top: 5px;*/
+}
+
+#billing-area h5:first-child{
+    color: #111f9c;
+}
+
+#billing-area h5:nth-child(2){
+    color: purple;
+}
+
+

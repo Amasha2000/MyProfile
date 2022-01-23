@@ -25,7 +25,7 @@
                             <a class="nav-link active" aria-current="page" href="#item-page">Items</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                            <a class="nav-link active" aria-current="page" href="#order-page">Orders</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -259,6 +259,184 @@
                         <button id="button-detail-item" type="button" class="btn btn-warning">Details</button>
                         <button id="button-clear-item" type="button" class="btn btn-secondary">Clear</button>
                     </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="order-page">
+        <div class="order-topic">
+            <img src="../bootstrapPOS/assets/images/order.png" class="img-fluid" alt="..." width="45">
+            <h3>
+                <small class="text-muted"><u>ORDERS</u></small>
+            </h3>
+        </div>
+        <section id="order-container" class="container-fluid">
+            <div class="row" id="first-row">
+                <div id="invoice-area" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <div id="top-order-invoice" >
+                        <h5>
+                            Invoice Details
+                        </h5>
+                    </div>
+                    <form class="row g-3" id="invoice-form">
+                        <div class="col-6">
+                            <label for="inputEmail4" class="form-label">Order ID</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputPassword4" class="form-label">Date</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputPassword4" class="form-label">Customer</label>
+                            <input type="password" class="form-control" id="inputPassword5">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputState" class="form-label">Customer ID</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Salary</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="inputAddress3" placeholder="">
+                        </div>
+                    </form>
+                  </div>
+                <div id="select-item-area" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <div id="top-select-item">
+                        <h5>
+                            Item Select
+                        </h5>
+                    </div>
+                    <form class="row g-3">
+                        <div class="col-6">
+                            <label for="inputEmail4" class="form-label">Item</label>
+                            <input type="email" class="form-control" id="inputEmail5">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputState" class="form-label">Item Code</label>
+                            <select id="inputState1" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Item Name</label>
+                            <input type="text" class="form-control" id="inputAddress4" placeholder="">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Price</label>
+                            <input type="text" class="form-control" id="inputAddress5" placeholder="">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Quantity On Hand</label>
+                            <input type="text" class="form-control" id="inputAddress6" placeholder="">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Order Quantity</label>
+                            <input type="text" class="form-control" id="inputAddress7" placeholder="">
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Add Item</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="billing-area" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                            <h5>
+                               Total:
+                            </h5>
+                            <h5>
+                                Sub Total:
+                            </h5>
+                        <form class="row g-3" >
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Cash</label>
+                                <input type="text" class="form-control" id="inputAddress8" placeholder="">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputState" class="form-label">Discount</label>
+                                <select id="inputState3" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Balance</label>
+                                <input type="text" class="form-control" id="inputAddress9" placeholder="">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success">Add Purchase</button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+            <div class="row" id="second-row">
+                <div id="order-table" class="col-12 table-responsive" >
+                    <table class="table table-primary table-striped table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td >I-01</td>
+                            <td>Rice</td>
+                            <td>3000.00</td>
+                            <td>34</td>
+                            <td>50000.00</td>
+                        </tr>
+                        <tr>
+                            <td>I-02</td>
+                            <td>Dhal</td>
+                            <td>2000.00</td>
+                            <td>44</td>
+                            <td>4000.00</td>
+                        </tr>
+                        <tr>
+                            <td>I-02</td>
+                            <td>Dhal</td>
+                            <td>2000.00</td>
+                            <td>44</td>
+                            <td>4000.00</td>
+                        </tr>
+                        <tr>
+                            <td>I-02</td>
+                            <td>Dhal</td>
+                            <td>2000.00</td>
+                            <td>44</td>
+                            <td>4000.00</td>
+                        </tr>
+                        <tr>
+                            <td>I-02</td>
+                            <td>Dhal</td>
+                            <td>2000.00</td>
+                            <td>44</td>
+                            <td>4000.00</td>
+                        </tr>
+                        <tr>
+                            <td>I-02</td>
+                            <td>Dhal</td>
+                            <td>2000.00</td>
+                            <td>44</td>
+                            <td>4000.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
