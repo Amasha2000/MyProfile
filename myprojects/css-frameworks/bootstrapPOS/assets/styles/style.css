@@ -248,11 +248,6 @@ nav>div>span{
     color: white;
 }
 
-#billing-area{
-    /*background: linear-gradient(#9de36c, #63a84c);*/
-    /*padding-top: 5px;*/
-}
-
 #billing-area h5:first-child{
     color: #111f9c;
 }
