@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../bootstrapPOS/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrapPOS/assets/styles/style.css">
+    <link rel="stylesheet" href="../bootstrapPOS/assets/styles/fontawesome/css/all.css">
+    <meta name="viewport" content="width=width-device initial-scale=1">
+    <title>POS System</title>
+</head>
+<body>
+        <header>
+            <nav class="navbar fixed-top navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                        <img src="../bootstrapPOS/assets/images/shopping-cart%20.png" alt="" width="50" height="55" class="d-inline-block align-text-center">
+                        <span>P O S System</span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            </ul>
+                        <ul class="navbar-nav" id="nav-content">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../bootstrapPOS/customer.html">Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../bootstrapPOS/item.html">Items</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../bootstrapPOS/orders.html">Orders</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Others
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item " href="../bootstrapPOS/customer.html">Customers</a></li>
+                                    <li><a class="dropdown-item " href="../bootstrapPOS/item.html">Items</a></li>
+                                    <li><a class="dropdown-item " href="../bootstrapPOS/orders.html">Orders</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <section class="icons">
+        <div class="icon-div">
+            <i class="fa fa-user-plus"></i>
+            <h3>Sign Up</h3>
+        </div>
+        <div class="icon-div">
+            <i class="fa fa-power-off"></i>
+            <h3>Log Out</h3>
+        </div>
+    </section>
+    <section class="container-fluid" id="home">
+        <section class="row mt-2" id="row">
+            <div class="col-12  px-0">
+                <div id="carouselHero" class="carousel slide" data-bs-ride="carousel" id="carouselExampleCaptions">
+                    <div class="carousel-indicators">
+                        <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
+                                data-bs-target="#carouselExampleCaptions" type="button"></button>
+                        <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleCaptions"
+                                type="button"></button>
+                        <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions"
+                                type="button"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="..." id="image1" class="d-block w-100" src="../bootstrapPOS/assets/images/shop-1.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Get Started From Here.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." id="image2" class="d-block w-100" src="../bootstrapPOS/assets/images/shop-2.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Get Started From Here.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." id="image3" class="d-block w-100" src="../bootstrapPOS/assets/images/shop-3.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Get Started From Here.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleCaptions"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleCaptions"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12" id="title">
+                <h1>Welcome To The POS System</h1>
+            </div>
+        </section>
+    </section>
+    <script src="../bootstrapPOS/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

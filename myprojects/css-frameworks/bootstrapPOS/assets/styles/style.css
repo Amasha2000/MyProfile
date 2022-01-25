@@ -1,11 +1,12 @@
 /*navigation styles*/
 nav{
-    background-color: #c06de3;
+    background-color: #ba55e8;
 }
 
 #nav-content{
-    right: 0;
+    right: 60px;
     position: absolute;
+    background-color: rgba(186, 85, 232, 0.9);
 }
 
 .navbar-nav li{
@@ -42,6 +43,51 @@ nav>div>span{
     right: 0;
 }
 
+#home{
+    position: relative;
+}
+
+#carouselHero .carousel-item>img{
+    width: 100vw;
+    height: 88.8vh;
+}
+
+@media all and (min-width: 320px) and (max-width: 600px){
+    #carouselHero .carousel-item>img{
+        height: 60vh;
+    }
+}
+
+#carouselHero .carousel-item:before {
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(44, 14, 92, 0.6), rgba(0, 0, 0, 0.6));
+    display: block;
+    position: absolute;
+    top:-100px;
+    width: 100vw;
+    height: 127vh;
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background:linear-gradient(#622b99, #31074b);
+}
+
+#title h1{
+    color: white;
+    font-family:"Calibri";
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+
+.icons{
+    z-index: 5;
+}
+
 .icons div {
     right: -180px;
     height: 35px;
@@ -76,31 +122,36 @@ nav>div>span{
     transition: all 3s;
 }
 
+#customer-page{
+    position: relative;
+    top:0;
+}
+
 .customer-topic img{
     position: relative;
     left: 10px;
-    top: 100px;
+    top:85px
 }
 
 .customer-topic h3 {
     position: relative;
     left: 24px;
-    top: 105px;
     display: inline;
+    top:90px;
 }
 
 .customer-buttons{
     position: relative;
-    top:120px;
+    top:110px;
     left:10px;
     display: inline-block;
 }
 
 #customer-container{
     position: relative;
-    top: 140px;
+    top: 130px;
     height:70vh;
-    overflow: overlay;
+    /*overflow: overlay;*/
 }
 
 .table td,.table th{
@@ -169,35 +220,34 @@ nav>div>span{
 /*=========================Item Page Styles=============================*/
 #item-page{
     position: relative;
-    top:100px;
     height: 100vh;
 }
 
 .item-topic img{
     position: relative;
     left: 10px;
-    top: 80px;
+    top: 115px;
 }
 
 .item-topic h3 {
     position: relative;
     left: 24px;
-    top: 85px;
+    top: 120px;
     display: inline;
 }
 
 .item-buttons{
     position: relative;
-    top:100px;
+    top:150px;
     left:10px;
     display: inline-block;
 }
 
 #item-container{
     position: relative;
-    top:130px;
+    top:170px;
     height:70vh;
-    overflow: overlay;
+    /*overflow: overlay;*/
 }
 
 #item-table{
@@ -245,7 +295,7 @@ nav>div>span{
 .order-topic img{
     position: relative;
     left: 10px;
-    top: 90px;
+    top:90px;
 }
 
 .order-topic h3 {
@@ -257,7 +307,7 @@ nav>div>span{
 
 #first-row{
     position: relative;
-    top:130px;
+    top:110px;
 }
 
 #second-row{
