@@ -124,7 +124,6 @@ nav>div>span{
 
 #customer-page{
     position: relative;
-    top:-50px;
 }
 
 .customer-topic img{
@@ -151,7 +150,6 @@ nav>div>span{
     position: relative;
     top: 130px;
     height:70vh;
-    overflow: overlay;
 }
 
 .table td,.table th{
@@ -226,28 +224,27 @@ nav>div>span{
 .item-topic img{
     position: relative;
     left: 10px;
-    top: 115px;
+    top: 90px;
 }
 
 .item-topic h3 {
     position: relative;
     left: 24px;
-    top: 120px;
+    top: 95px;
     display: inline;
 }
 
 .item-buttons{
     position: relative;
-    top:150px;
+    top:120px;
     left:10px;
     display: inline-block;
 }
 
 #item-container{
     position: relative;
-    top:170px;
-    height:70vh;
-    overflow: overlay;
+    top:150px;
+    height:50vh;
 }
 
 #item-table{

@@ -52,17 +52,17 @@
         </div>
     </nav>
 </header>
-<section class="icons">
-    <div class="icon-div">
-        <i class="fa fa-user-plus"></i>
-        <h3>Sign Up</h3>
-    </div>
-    <div class="icon-div">
-        <i class="fa fa-power-off"></i>
-        <h3>Log Out</h3>
-    </div>
-</section>
 <section class="container-fluid" id="home">
+    <section class="icons">
+        <div class="icon-div">
+            <i class="fa fa-user-plus"></i>
+            <h3>Sign Up</h3>
+        </div>
+        <div class="icon-div">
+            <i class="fa fa-power-off"></i>
+            <h3>Log Out</h3>
+        </div>
+    </section>
     <section class="row mt-2" id="row">
         <div class="col-12  px-0">
             <div id="carouselHero" class="carousel slide" data-bs-ride="carousel" id="carouselExampleCaptions">
@@ -201,18 +201,6 @@
                         <td>34 years</td>
                         <td>23000.00</td>
                     </tr>
-                    <tr>
-                        <td>Nimal</td>
-                        <td>No.24/5,Galle</td>
-                        <td>34 years</td>
-                        <td>23000.00</td>
-                    </tr>
-                    <tr>
-                        <td>Nimal</td>
-                        <td>No.24/5,Galle</td>
-                        <td>34 years</td>
-                        <td>23000.00</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -257,6 +245,16 @@
             <small class="text-muted"><u>ITEMS</u></small>
         </h3>
     </div>
+    <section class="icons">
+        <div class="icon-div">
+            <i class="fa fa-user-plus"></i>
+            <h3>Sign Up</h3>
+        </div>
+        <div class="icon-div">
+            <i class="fa fa-power-off"></i>
+            <h3>Log Out</h3>
+        </div>
+    </section>
     <div class="item-buttons">
         <button type="button" class="btn btn-success">New Item</button>
         <button type="button" class="btn btn-outline-success">View All</button>
@@ -354,6 +352,16 @@
             <small class="text-muted"><u>ORDERS</u></small>
         </h3>
     </div>
+    <section class="icons">
+        <div class="icon-div">
+            <i class="fa fa-user-plus"></i>
+            <h3>Sign Up</h3>
+        </div>
+        <div class="icon-div">
+            <i class="fa fa-power-off"></i>
+            <h3>Log Out</h3>
+        </div>
+    </section>
     <section id="order-container" class="container-fluid">
         <div class="row" id="first-row">
             <div id="invoice-area" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
@@ -527,5 +535,55 @@
     </section>
 </section>
 <script src="../spa/assets/js/bootstrap.min.js"></script>
+<script>
+    document.getElementsByClassName("nav-link")[0].addEventListener("click",function (){
+       document.getElementById("home").style.display="block";
+       document.getElementById("customer-page").style.display="none";
+       document.getElementById("item-page").style.display="none";
+       document.getElementById("order-page").style.display="none";
+    });
+
+    document.getElementsByClassName("nav-link")[1].addEventListener("click",function (){
+        document.getElementById("customer-page").style.display="block"
+        document.getElementById("home").style.display="none";
+        document.getElementById("item-page").style.display="none";
+        document.getElementById("order-page").style.display="none";
+    });
+
+    document.getElementsByClassName("nav-link")[2].addEventListener("click",function (){
+        document.getElementById("item-page").style.display="block";
+        document.getElementById("home").style.display="none";
+        document.getElementById("customer-page").style.display="none";
+        document.getElementById("order-page").style.display="none";
+    });
+
+    document.getElementsByClassName("nav-link")[3].addEventListener("click",function (){
+        document.getElementById("order-page").style.display="block";
+        document.getElementById("home").style.display="none";
+        document.getElementById("customer-page").style.display="none";
+        document.getElementById("item-page").style.display="none";
+    });
+
+    document.getElementsByClassName("dropdown-item")[0].addEventListener("click",function (){
+        document.getElementById("customer-page").style.display="block";
+        document.getElementById("home").style.display="none";
+        document.getElementById("item-page").style.display="none";
+        document.getElementById("order-page").style.display="none";
+    });
+
+    document.getElementsByClassName("dropdown-item")[1].addEventListener("click",function (){
+        document.getElementById("item-page").style.display="block";
+        document.getElementById("home").style.display="none";
+        document.getElementById("customer-page").style.display="none";
+        document.getElementById("order-page").style.display="none";
+    });
+
+    document.getElementsByClassName("dropdown-item")[2].addEventListener("click",function (){
+        document.getElementById("order-page").style.display="block";
+        document.getElementById("home").style.display="none";
+        document.getElementById("customer-page").style.display="none";
+        document.getElementById("item-page").style.display="none";
+    })
+</script>
 </body>
 </html>
