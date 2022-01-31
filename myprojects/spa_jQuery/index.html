@@ -198,18 +198,6 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>C-0001</td>
-                        <td>Amal</td>
-                        <td>No.24/5,Galle</td>
-                        <td>077-8998398</td>
-                    </tr>
-                    <tr>
-                        <td>C-0002</td>
-                        <td>Kamal</td>
-                        <td>No.24/5,Colombo</td>
-                        <td>011-9229209</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -299,18 +287,6 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>I-01</td>
-                        <td>Rice</td>
-                        <td>34</td>
-                        <td>3000.00</td>
-                    </tr>
-                    <tr>
-                        <td>I-02</td>
-                        <td>Dhal</td>
-                        <td>44</td>
-                        <td>2000.00</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -529,21 +505,21 @@
     });
 
     $("#button-save-update-customer").click(function () {
-        var id = $("#cus-id").val();
-        var name = $("#cus-name").val();
-        var address = $("#cus-address").val();
-        var teleNum = $("#tel-num").val();
+        let id = $("#cus-id").val();
+        let name = $("#cus-name").val();
+        let address = $("#cus-address").val();
+        let teleNum = $("#tel-num").val();
 
-        $("#customer-table tbody").append("<tr><td>" + id + "</td>" + "<td>" + name + "</td>" + "<td>" + address + "</td>" + "<td>" + teleNum + "</td></tr>");
+        $("#customer-table tbody").append(`<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${teleNum}</td></tr>`);
     });
 
     $("#button-save-update-item").click(function () {
-        var code = $("#item-code").val();
-        var name = $("#item-name").val();
-        var quantity = $("#item-quantity").val();
-        var price = $("#item-price").val();
+        let code = $("#item-code").val();
+        let name = $("#item-name").val();
+        let quantity = $("#item-quantity").val();
+        let price = $("#item-price").val();
 
-        $("#item-table tbody").append("<tr><td>" + code + "</td>" + "<td>" + name + "</td>" + "<td>" + quantity + "</td>" + "<td>" + price + "</td></tr>");
+        $("#item-table tbody").append(`<tr><td>${code}</td><td>${name}</td><td>${quantity}</td><td>${price}</td></tr>`);
     });
 </script>
 </body>
