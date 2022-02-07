@@ -584,6 +584,44 @@
         });
     });
 
+    $("#cus-id").keydown(function(event){
+        if(event.key=="Enter"){
+            $("#cus-name").focus();
+        }
+    });
+
+    $("#cus-name").keydown(function(event){
+        if(event.key=="Enter"){
+            $("#cus-address").focus();
+        }
+    });
+
+    $("#cus-address").keydown(function(event){
+        if(event.key=="Enter"){
+            $("#tel-num").focus();
+        }
+    });
+
+    $("#tel-num").keydown(function(event){
+        if(event.key=="Enter"){
+            let id = $("#cus-id").val();
+            let name = $("#cus-name").val();
+            let address = $("#cus-address").val();
+            let teleNum = $("#tel-num").val();
+
+            $("#customer-table tbody").append(`<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${teleNum}</td></tr>`);
+
+            $("#cus-id").val('');
+            $("#cus-name").val('');
+            $("#cus-address").val('');
+            $("#tel-num").val('');
+
+
+            $("#cus-id").focus();
+        }
+    });
+
+
     $("#button-save-update-item").click(function () {
 
         $("#item-table tbody tr").off();
@@ -608,8 +646,41 @@
         });
     });
 
+    $("#item-code").keydown(function (event){
+        if(event.key=="Enter"){
+            $("#item-name").focus();
+        }
+    });
 
+    $("#item-name").keydown(function (event){
+        if(event.key=="Enter") {
+            $("#item-quantity").focus();
+        }
+    });
 
+    $("#item-quantity").keydown(function (event){
+        if(event.key=="Enter") {
+            $("#item-price").focus();
+        }
+    });
+
+    $("#item-price").keydown(function (event){
+        if(event.key=="Enter") {
+            let code = $("#item-code").val();
+            let name = $("#item-name").val();
+            let quantity = $("#item-quantity").val();
+            let price = $("#item-price").val();
+
+            $("#item-table tbody").append(`<tr><td>${code}</td><td>${name}</td><td>${quantity}</td><td>${price}</td></tr>`);
+
+            $("#item-code").val('');
+            $("#item-name").val('');
+            $("#item-quantity").val('');
+            $("#item-price").val('');
+
+            $("#item-code").focus();
+        }
+    });
 </script>
 </body>
 </html>
