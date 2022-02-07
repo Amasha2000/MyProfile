@@ -561,12 +561,20 @@
     // });
 
     $("#button-save-update-customer").click(function () {
+
+        $("#customer-table tbody tr").off();
+
         let id = $("#cus-id").val();
         let name = $("#cus-name").val();
         let address = $("#cus-address").val();
         let teleNum = $("#tel-num").val();
 
         $("#customer-table tbody").append(`<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${teleNum}</td></tr>`);
+
+        $("#cus-id").val('');
+        $("#cus-name").val('');
+        $("#cus-address").val('');
+        $("#tel-num").val('');
 
         $("#customer-table tbody tr").click(function (){
             $("#cus-id").val($(this).children(":nth-child(1)").text());
@@ -577,12 +585,20 @@
     });
 
     $("#button-save-update-item").click(function () {
+
+        $("#item-table tbody tr").off();
+
         let code = $("#item-code").val();
         let name = $("#item-name").val();
         let quantity = $("#item-quantity").val();
         let price = $("#item-price").val();
 
         $("#item-table tbody").append(`<tr><td>${code}</td><td>${name}</td><td>${quantity}</td><td>${price}</td></tr>`);
+
+        $("#item-code").val('');
+        $("#item-name").val('');
+        $("#item-quantity").val('');
+        $("#item-price").val('');
 
         $("#item-table tbody tr").click(function (){
             $("#item-code").val($(this).children(":nth-child(1)").text());
