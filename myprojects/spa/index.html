@@ -25,16 +25,17 @@
                 </ul>
                 <ul class="navbar-nav" id="nav-content">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a id="nav-link-one" class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#customer-page">Customers</a>
+                        <a id="nav-link-two" class="nav-link active" aria-current="page"
+                           href="#customer-page">Customers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#item-page">Items</a>
+                        <a id="nav-link-three" class="nav-link active" aria-current="page" href="#item-page">Items</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#order-page">Orders</a>
+                        <a id="nav-link-four" class="nav-link active" aria-current="page" href="#order-page">Orders</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -42,9 +43,9 @@
                             Others
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item " href="#customer-page">Customers</a></li>
-                            <li><a class="dropdown-item " href="#item-page">Items</a></li>
-                            <li><a class="dropdown-item " href="#order-page">Orders</a></li>
+                            <li><a id="dropdown-one" class="dropdown-item " href="#customer-page">Customers</a></li>
+                            <li><a id="dropdown-two" class="dropdown-item " href="#item-page">Items</a></li>
+                            <li><a id="dropdown-three" class="dropdown-item " href="#order-page">Orders</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -193,22 +194,10 @@
                         <th scope="col">Customer ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Address</th>
-                        <th scope="col">Salary</th>
+                        <th scope="col">Telephone Number</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>C-0001</td>
-                        <td>Amal</td>
-                        <td>No.24/5,Galle</td>
-                        <td>077-8998398</td>
-                    </tr>
-                    <tr>
-                        <td>C-0002</td>
-                        <td>Kamal</td>
-                        <td>No.24/5,Colombo</td>
-                        <td>011-9229209</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -280,7 +269,7 @@
                     <button id="item-search-button" type="submit" class="btn btn-primary">Search</button>
                 </form>
                 <div class="button-area">
-                    <button id="button-detail-item" type="button" class="btn btn-success">Save or Update</button>
+                    <button id="button-save-update-item" type="button" class="btn btn-success">Save or Update</button>
                     <button id="button-delete-item" type="button" class="btn btn-danger">Delete</button>
                     <button id="button-clear-item" type="button" class="btn btn-warning">Clear</button>
                 </div>
@@ -298,18 +287,6 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>I-01</td>
-                        <td>Rice</td>
-                        <td>34</td>
-                        <td>3000.00</td>
-                    </tr>
-                    <tr>
-                        <td>I-02</td>
-                        <td>Dhal</td>
-                        <td>44</td>
-                        <td>2000.00</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -471,6 +448,7 @@
     </section>
 </section>
 <script src="../spa/assets/js/bootstrap.min.js"></script>
+<script src="../spa/assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
     document.getElementsByClassName("nav-link")[0].addEventListener("click", function () {
         document.getElementById("home").style.display = "block";
@@ -526,6 +504,92 @@
         document.getElementById("customer-page").style.display = "none";
         document.getElementById("item-page").style.display = "none";
         document.getElementById("order-page").style.display = "none";
+    });
+
+    // $("#home").css('display', 'block');
+    // $("#customer-page").css('display', 'none');
+    // $("#item-page").css('display', 'none');
+    // $("#order-page").css('display', 'none');
+    //
+    // $("#nav-link-one").click(function () {
+    //     $("#home").css('display', 'block');
+    //     $("#customer-page").css('display', 'none');
+    //     $("#item-page").css('display', 'none');
+    //     $("#order-page").css('display', 'none');
+    // });
+    //
+    // $("#nav-link-two").click(function () {
+    //     $("#home").css('display', 'none');
+    //     $("#customer-page").css('display', 'block');
+    //     $("#item-page").css('display', 'none');
+    //     $("#order-page").css('display', 'none');
+    // });
+    //
+    // $("#nav-link-three").click(function () {
+    //     $("#home").css('display', 'none');
+    //     $("#customer-page").css('display', 'none');
+    //     $("#item-page").css('display', 'block');
+    //     $("#order-page").css('display', 'none');
+    // });
+    //
+    // $("#nav-link-four").click(function () {
+    //     $("#home").css('display', 'none');
+    //     $("#customer-page").css('display', 'none');
+    //     $("#item-page").css('display', 'none');
+    //     $("#order-page").css('display', 'block');
+    // });
+    //
+    // $("#dropdown-one").click(function () {
+    //     $("#home").css('display', 'none');
+    //     $("#customer-page").css('display', 'block');
+    //     $("#item-page").css('display', 'none');
+    //     $("#order-page").css('display', 'none');
+    // });
+    //
+    // $("#dropdown-two").click(function () {
+    //     $("#home").css('display', 'none');
+    //     $("#customer-page").css('display', 'none');
+    //     $("#item-page").css('display', 'block');
+    //     $("#order-page").css('display', 'none');
+    // });
+    //
+    // $("#dropdown-three").click(function () {
+    //     $("#home").css('display', 'none');
+    //     $("#customer-page").css('display', 'none');
+    //     $("#item-page").css('display', 'none');
+    //     $("#order-page").css('display', 'block');
+    // });
+
+    $("#button-save-update-customer").click(function () {
+        let id = $("#cus-id").val();
+        let name = $("#cus-name").val();
+        let address = $("#cus-address").val();
+        let teleNum = $("#tel-num").val();
+
+        $("#customer-table tbody").append(`<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${teleNum}</td></tr>`);
+
+        $("#customer-table tbody tr").click(function (){
+            $("#cus-id").val($(this).children(":nth-child(1)").text());
+            $("#cus-name").val($(this).children(":nth-child(2)").text());
+            $("#cus-address").val($(this).children(":nth-child(3)").text());
+            $("#tel-num").val($(this).children(":nth-child(4)").text());
+        });
+    });
+
+    $("#button-save-update-item").click(function () {
+        let code = $("#item-code").val();
+        let name = $("#item-name").val();
+        let quantity = $("#item-quantity").val();
+        let price = $("#item-price").val();
+
+        $("#item-table tbody").append(`<tr><td>${code}</td><td>${name}</td><td>${quantity}</td><td>${price}</td></tr>`);
+
+        $("#item-table tbody tr").click(function (){
+            $("#item-code").val($(this).children(":nth-child(1)").text());
+            $("#item-name").val($(this).children(":nth-child(2)").text());
+            $("#item-quantity").val($(this).children(":nth-child(3)").text());
+            $("#item-price").val($(this).children(":nth-child(4)").text());
+        });
     });
 
 </script>
