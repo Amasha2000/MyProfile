@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events</title>
+    <style>
+        div {
+            background: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello IJSE...!</h1>
+<div>
+
+</div>
+
+
+<script src="../mouse-events/assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+    $("div").mouseup(function () {
+        console.log("Mouse Up")
+    });
+
+    $("div").mousedown(function () {
+        console.log("Mouse Down")
+    });
+
+    $("div").mousemove(function () {
+        console.log("Mouse Move")
+    });
+
+    //------------------------------------------- moving h1 to the mouse position-----------------------------------------------
+
+    $(this).mousemove(function (event){
+        var x=event.pageX;
+        var y=event.pageY;
+        $("h1").css('position','absolute');
+        $("h1").css('top',y);
+        $("h1").css('left',x);
+    });
+</script>
+</body>
+</html>
