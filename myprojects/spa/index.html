@@ -603,6 +603,9 @@
     });
 
     $("#tel-num").keydown(function(event){
+
+        $("#customer-table tbody tr").off();
+
         if(event.key=="Enter"){
             let id = $("#cus-id").val();
             let name = $("#cus-name").val();
@@ -616,6 +619,12 @@
             $("#cus-address").val('');
             $("#tel-num").val('');
 
+            $("#customer-table tbody tr").click(function (){
+                $("#cus-id").val($(this).children(":nth-child(1)").text());
+                $("#cus-name").val($(this).children(":nth-child(2)").text());
+                $("#cus-address").val($(this).children(":nth-child(3)").text());
+                $("#tel-num").val($(this).children(":nth-child(4)").text());
+            });
 
             $("#cus-id").focus();
         }
@@ -665,6 +674,9 @@
     });
 
     $("#item-price").keydown(function (event){
+
+        $("#item-table tbody tr").off();
+
         if(event.key=="Enter") {
             let code = $("#item-code").val();
             let name = $("#item-name").val();
@@ -672,6 +684,13 @@
             let price = $("#item-price").val();
 
             $("#item-table tbody").append(`<tr><td>${code}</td><td>${name}</td><td>${quantity}</td><td>${price}</td></tr>`);
+
+            $("#item-table tbody tr").click(function (){
+                $("#item-code").val($(this).children(":nth-child(1)").text());
+                $("#item-name").val($(this).children(":nth-child(2)").text());
+                $("#item-quantity").val($(this).children(":nth-child(3)").text());
+                $("#item-price").val($(this).children(":nth-child(4)").text());
+            });
 
             $("#item-code").val('');
             $("#item-name").val('');
