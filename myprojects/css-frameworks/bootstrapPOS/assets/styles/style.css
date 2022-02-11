@@ -200,6 +200,12 @@ nav > div > span {
     top: 100px;
 }
 
+@media all and (min-width: 320px) and (max-width: 768px){
+    #customer-table{
+        top:120px;
+    }
+}
+
 /*=========================Item Page Styles=============================*/
 #item-page {
     position: relative;
@@ -261,6 +267,12 @@ nav > div > span {
 
 #item-search-area {
     position: relative;
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+    #item-table {
+        top: 120px;
+    }
 }
 
 /*==============================Order Page Styles====================================*/
