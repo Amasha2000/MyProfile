@@ -13,6 +13,10 @@
 </head>
 <body>
 <h1>Hello IJSE...!</h1>
+<h2>1</h2>
+<button id="button">Start</button>
+<button id="button1">Stop</button>
+<br><br>
 <div>
 
 </div>
@@ -41,6 +45,35 @@
         $("h1").css('position','absolute');
         $("h1").css('top',y);
         $("h1").css('left',x);
+    });
+
+    var position=0;
+    let text=$("h1").text();
+    function animateText(){
+         $("h1").text(text.substr(0,position));
+         position++;
+
+        if(position == text.length){
+             position=0;
+         }
+     }
+         setInterval(animateText,200);
+
+
+    let number=0
+    let timer
+    $("#button").click(function (){
+        clearInterval(timer);
+      timer=setInterval(increment,100)
+    });
+
+    function increment(){
+        $("h2").text(number);
+        number++;
+    }
+
+    $("#button1").click(function (){
+        clearInterval(timer);
     });
 </script>
 </body>

@@ -569,6 +569,7 @@
         let address = $("#cus-address").val();
         let teleNum = $("#tel-num").val();
 
+
         $("#customer-table tbody").append(`<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${teleNum}</td></tr>`);
 
         $("#cus-id").val('');
@@ -581,6 +582,10 @@
             $("#cus-name").val($(this).children(":nth-child(2)").text());
             $("#cus-address").val($(this).children(":nth-child(3)").text());
             $("#tel-num").val($(this).children(":nth-child(4)").text());
+        });
+
+        $("#customer-table tbody tr").dblclick(function (){
+            $(this).remove();
         });
     });
 
@@ -626,6 +631,10 @@
                 $("#tel-num").val($(this).children(":nth-child(4)").text());
             });
 
+            $("#customer-table tbody tr").dblclick(function (){
+                $(this).remove();
+            });
+
             $("#cus-id").focus();
         }
     });
@@ -652,6 +661,10 @@
             $("#item-name").val($(this).children(":nth-child(2)").text());
             $("#item-quantity").val($(this).children(":nth-child(3)").text());
             $("#item-price").val($(this).children(":nth-child(4)").text());
+        });
+
+        $("#item-table tbody tr").dblclick(function (){
+            $(this).remove();
         });
     });
 
@@ -690,6 +703,10 @@
                 $("#item-name").val($(this).children(":nth-child(2)").text());
                 $("#item-quantity").val($(this).children(":nth-child(3)").text());
                 $("#item-price").val($(this).children(":nth-child(4)").text());
+            });
+
+            $("#item-table tbody tr").dblclick(function (){
+                $(this).remove();
             });
 
             $("#item-code").val('');
