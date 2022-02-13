@@ -137,19 +137,23 @@
                 <form>
                     <div class="col-12">
                         <label for="cus-id" class="form-label">Customer ID</label>
-                        <input type="email" class="form-control " id="cus-id">
+                        <input type="text" class="form-control " id="cus-id">
+                        <p><small id="id-error" class="text-danger pl-1"></small></p>
                     </div>
                     <div class="col-12">
                         <label for="cus-name" class="form-label">Customer Name</label>
                         <input type="text" class="form-control" id="cus-name" placeholder="">
+                        <p><small id="name-error" class="text-danger pl-1"></small></p>
                     </div>
                     <div class="col-12">
                         <label for="cus-address" class="form-label">Address</label>
                         <input type="text" class="form-control" id="cus-address" placeholder="">
+                        <p><small id="address-error" class="text-danger pl-1"></small></p>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" id="rowCus">
                         <label for="tel-num" class="form-label">Telephone Number</label>
                         <input type="text" class="form-control" id="tel-num" placeholder="">
+                        <p><small id="tele-error" class="text-danger pl-1"></small></p>
                     </div>
                 </form>
             </div>
@@ -179,8 +183,8 @@
                     <button id="customer-search-button" type="submit" class="btn btn-primary">Search</button>
                 </form>
                 <div class="button-area">
-                    <button id="button-save-update-customer" type="button" class="btn btn-success">Save Or Update
-                    </button>
+                    <button id="button-save-customer" type="button" class="btn btn-success">Save</button>
+                    <button id="button-update-customer" type="button" class="btn btn-info">Update</button>
                     <button id="button-delete-customer" type="button" class="btn btn-danger">Delete</button>
                     <button id="button-clear-customer" type="button" class="btn btn-warning">Clear</button>
                 </div>
@@ -227,26 +231,30 @@
                 <form>
                     <div class="col-12">
                         <label for="item-code" class="form-label">Item Code</label>
-                        <input type="email" class="form-control " id="item-code">
+                        <input type="text" class="form-control " id="item-code">
+                        <p><small id="code-error" class="text-danger pl-1"></small></p>
                     </div>
                     <div class="col-12">
                         <label for="item-name" class="form-label">Item Name</label>
                         <input type="text" class="form-control" id="item-name" placeholder="">
+                        <p><small id="item-name-error" class="text-danger pl-1"></small></p>
                     </div>
                     <div class="col-12">
                         <label for="item-quantity" class="form-label">Quantity</label>
                         <input type="text" class="form-control" id="item-quantity" placeholder="">
+                        <p><small id="item-quantity-error" class="text-danger pl-1"></small></p>
                     </div>
                     <div class="col-12">
                         <label for="item-price" class="form-label">Price</label>
                         <input type="text" class="form-control" id="item-price" placeholder="">
+                        <p><small id="item-price-error" class="text-danger pl-1"></small></p>
                     </div>
                 </form>
             </div>
             <div id="item-search-area" class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
                 <div id="top-item-search">
                     <h5>
-                        Search Customer
+                        Search Item
                     </h5>
                 </div>
                 <form class="search-form">
@@ -269,7 +277,8 @@
                     <button id="item-search-button" type="submit" class="btn btn-primary">Search</button>
                 </form>
                 <div class="button-area">
-                    <button id="button-save-update-item" type="button" class="btn btn-success">Save or Update</button>
+                    <button id="button-save-item" type="button" class="btn btn-success">Save</button>
+                    <button id="button-update-item" type="button" class="btn btn-info">Update</button>
                     <button id="button-delete-item" type="button" class="btn btn-danger">Delete</button>
                     <button id="button-clear-item" type="button" class="btn btn-warning">Clear</button>
                 </div>
@@ -560,35 +569,155 @@
     //     $("#order-page").css('display', 'block');
     // });
 
-    $("#button-save-update-customer").click(function () {
+    /*--------------------------------------------JQueries for customer page---------------------------------------------------------*/
+
+    //Save Customer
+    $("#button-save-customer").click(function () {
 
         $("#customer-table tbody tr").off();
 
-        let id = $("#cus-id").val();
-        let name = $("#cus-name").val();
-        let address = $("#cus-address").val();
-        let teleNum = $("#tel-num").val();
+        if (confirm("Do you want to Save Customer Details?")) {
 
+            let id = $("#cus-id").val();
+            let name = $("#cus-name").val();
+            let address = $("#cus-address").val();
+            let teleNum = $("#tel-num").val();
 
-        $("#customer-table tbody").append(`<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${teleNum}</td></tr>`);
+            //Load Customer Details To Table
+            $("#customer-table tbody").append(`<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${teleNum}</td></tr>`);
 
-        $("#cus-id").val('');
-        $("#cus-name").val('');
-        $("#cus-address").val('');
-        $("#tel-num").val('');
+            $("#cus-id").val('');
+            $("#cus-name").val('');
+            $("#cus-address").val('');
+            $("#tel-num").val('');
 
+        } else {
+            //Do Nothing
+        }
+
+        //Load Table Details To Input Fields
         $("#customer-table tbody tr").click(function () {
+
+            customerRowIndex = $(this);
+
             $("#cus-id").val($(this).children(":nth-child(1)").text());
             $("#cus-name").val($(this).children(":nth-child(2)").text());
             $("#cus-address").val($(this).children(":nth-child(3)").text());
             $("#tel-num").val($(this).children(":nth-child(4)").text());
+
         });
 
-        $("#customer-table tbody tr").dblclick(function (){
+        //Remove Table Details when double click the row
+        $("#customer-table tbody tr").dblclick(function () {
             $(this).remove();
         });
+
     });
 
+    //Update Customer Details
+    var customerRowIndex;
+
+    $("#button-update-customer").click(function () {
+
+        if (confirm("Do you want to Update Customer Details?")) {
+            customerRowIndex.children(":nth-child(1)").text($("#cus-id").val());
+            customerRowIndex.children(":nth-child(2)").text($("#cus-name").val());
+            customerRowIndex.children(":nth-child(3)").text($("#cus-address").val());
+            customerRowIndex.children(":nth-child(4)").text($("#tel-num").val());
+
+            $("#cus-id").val('');
+            $("#cus-name").val('');
+            $("#cus-address").val('');
+            $("#tel-num").val('');
+        } else {
+            //Do Nothing
+        }
+    });
+
+
+    //Validate Customer Input Fields
+    var regExCusID = /^(C00-)[0-9]{3,4}$/;
+    var regExCusName = /^([A-z]+([\ A-z]+)*){3,50}$/;
+    var regExCusAddress = /^[A-z0-9'\/\.\-\s\,]{7,75}$/;
+    var regExTeleNumber = /^[0-9]{3}[-][0-9]{7}$/;
+
+    var cusIdField = false;
+    var cusNameField = false;
+    var cusAddressField = false;
+    var cusNumberField = false;
+
+
+    $("#cus-id").keyup(function () {
+        let id = $("#cus-id").val();
+        if (regExCusID.test(id)) {
+            $("#cus-id").css("border", "3px solid green");
+            $("#id-error").text("");
+            cusIdField = true;
+            validateCustomer();
+        } else {
+            $("#cus-id").css('border', '3px solid red');
+            $("#id-error").text("Wrong... format :C00-000");
+            $(this).data('valid', false);
+            cusIdField = false;
+            validateCustomer();
+        }
+    });
+
+    $("#cus-name").keyup(function () {
+        let name = $("#cus-name").val();
+        if (regExCusName.test(name)) {
+            $("#cus-name").css("border", "3px solid green");
+            $("#name-error").text("");
+            cusNameField = true;
+            validateCustomer();
+        } else {
+            $("#cus-name").css('border', '3px solid red');
+            $("#name-error").text("Wrong... format :Minimum 3,Max 50 Space Allowed");
+            cusNameField = false;
+            validateCustomer();
+        }
+    });
+
+    $("#cus-address").keyup(function () {
+        let address = $("#cus-address").val();
+        if (regExCusAddress.test(address)) {
+            $("#cus-address").css("border", "3px solid green");
+            $("#address-error").text("");
+            cusAddressField = true;
+            validateCustomer();
+        } else {
+            $("#cus-address").css('border', '3px solid red');
+            $("#address-error").text("Wrong... format : Minimum 7");
+            cusAddressField = false;
+            validateCustomer();
+        }
+    });
+
+    $("#tel-num").keyup(function () {
+        let teleNum = $("#tel-num").val();
+        if (regExTeleNumber.test(teleNum)) {
+            $("#tel-num").css("border", "3px solid green");
+            $("#tele-error").text("");
+            cusNumberField = true;
+            validateCustomer();
+        } else {
+            $("#tel-num").css('border', '3px solid red');
+            $("#tele-error").text("Wrong... format : 000-0000000");
+            cusNumberField = false;
+            validateCustomer();
+        }
+    });
+
+    //Enable or Disable Save Button
+    function validateCustomer() {
+        if (cusIdField == true && cusNameField == true && cusAddressField == true && cusNumberField == true) {
+            $("#button-save-customer").attr('disabled', false);
+        } else {
+            $("#button-save-customer").attr('disabled', true);
+        }
+    }
+
+    //Focus next input fields
     $("#cus-id").keydown(function (event) {
         if (event.key == "Enter") {
             $("#cus-name").focus();
@@ -607,6 +736,7 @@
         }
     });
 
+    //Load Customer Details To Table when press the Enter Key
     $("#tel-num").keydown(function (event) {
 
         $("#customer-table tbody tr").off();
@@ -625,13 +755,16 @@
             $("#tel-num").val('');
 
             $("#customer-table tbody tr").click(function () {
+
+                customerRowIndex = $(this);
+
                 $("#cus-id").val($(this).children(":nth-child(1)").text());
                 $("#cus-name").val($(this).children(":nth-child(2)").text());
                 $("#cus-address").val($(this).children(":nth-child(3)").text());
                 $("#tel-num").val($(this).children(":nth-child(4)").text());
             });
 
-            $("#customer-table tbody tr").dblclick(function (){
+            $("#customer-table tbody tr").dblclick(function () {
                 $(this).remove();
             });
 
@@ -639,35 +772,164 @@
         }
     });
 
+    //Clear Input Fields
+    $("#button-clear-customer").click(function () {
+        $("#cus-id").val('');
+        $("#cus-name").val('');
+        $("#cus-address").val('');
+        $("#tel-num").val('');
+    });
 
-    $("#button-save-update-item").click(function () {
+
+    /*--------------------------------------------JQueries for item page--------------------------------------------------*/
+
+    //Save Item
+
+    $("#button-save-item").click(function () {
 
         $("#item-table tbody tr").off();
 
-        let code = $("#item-code").val();
-        let name = $("#item-name").val();
-        let quantity = $("#item-quantity").val();
-        let price = $("#item-price").val();
+        if (confirm("Do you want to save this item?")) {
 
-        $("#item-table tbody").append(`<tr><td>${code}</td><td>${name}</td><td>${quantity}</td><td>${price}</td></tr>`);
+            let code = $("#item-code").val();
+            let name = $("#item-name").val();
+            let quantity = $("#item-quantity").val();
+            let price = $("#item-price").val();
 
-        $("#item-code").val('');
-        $("#item-name").val('');
-        $("#item-quantity").val('');
-        $("#item-price").val('');
+            //Load Item Details To Table
+            $("#item-table tbody").append(`<tr><td>${code}</td><td>${name}</td><td>${quantity}</td><td>${price}</td></tr>`);
 
+            $("#item-code").val('');
+            $("#item-name").val('');
+            $("#item-quantity").val('');
+            $("#item-price").val('');
+
+        } else {
+            //Do Nothing
+        }
+
+        //Load Table Details To Input Fields
         $("#item-table tbody tr").click(function () {
+
+            itemRowIndex = $(this);
+
             $("#item-code").val($(this).children(":nth-child(1)").text());
             $("#item-name").val($(this).children(":nth-child(2)").text());
             $("#item-quantity").val($(this).children(":nth-child(3)").text());
             $("#item-price").val($(this).children(":nth-child(4)").text());
         });
 
-        $("#item-table tbody tr").dblclick(function (){
+        //Remove Table Details when double click the row
+        $("#item-table tbody tr").dblclick(function () {
             $(this).remove();
         });
     });
 
+
+    //Update Item Details
+    var itemRowIndex;
+
+    $("#button-update-item").click(function () {
+
+        if (confirm("Do you want to Update Item Details?")) {
+            itemRowIndex.children(":nth-child(1)").text($("#item-code").val());
+            itemRowIndex.children(":nth-child(2)").text($("#item-name").val());
+            itemRowIndex.children(":nth-child(3)").text($("#item-quantity").val());
+            itemRowIndex.children(":nth-child(4)").text($("#item-price").val());
+
+            $("#item-code").val('');
+            $("#item-name").val('');
+            $("#item-quantity").val('');
+            $("#item-price").val('');
+        } else {
+            //Do Nothing
+        }
+    });
+
+
+    //Validate Item Input Fields
+    var regExItemCode = /^(I00-)[0-9]{3,4}$/;
+    var regExItemName = /^([A-z]+([\ A-z]+)*){3,50}$/;
+    var regExItemQuantity = /^[1-9]([0-9]{0,4})$/;
+    var regExItemPrice = /^(0(?!\.00)|[1-9]\d{0,6})\.\d{2}$/;
+
+    var itemCodeField = false;
+    var itemNameField = false;
+    var itemQuantityField = false;
+    var itemPriceField = false;
+
+
+    $("#item-code").keyup(function () {
+        let code = $("#item-code").val();
+        if (regExItemCode.test(code)) {
+            $("#item-code").css("border", "3px solid green");
+            $("#code-error").text("");
+            itemCodeField = true;
+            validateItem();
+        } else {
+            $("#item-code").css('border', '3px solid red');
+            $("#code-error").text("Wrong... format :I00-000");
+            $(this).data('valid', false);
+            itemCodeField = false;
+            validateItem();
+        }
+    });
+
+    $("#item-name").keyup(function () {
+        let name = $("#item-name").val();
+        if (regExItemName.test(name)) {
+            $("#item-name").css("border", "3px solid green");
+            $("#item-name-error").text("");
+            itemNameField = true;
+            validateItem();
+        } else {
+            $("#item-name").css('border', '3px solid red');
+            $("#item-name-error").text("Wrong... format :Minimum 3,Max 50 Space Allowed");
+            itemNameField = false;
+            validateItem();
+        }
+    });
+
+    $("#item-quantity").keyup(function () {
+        let quantity = $("#item-quantity").val();
+        if (regExItemQuantity.test(quantity)) {
+            $("#item-quantity").css("border", "3px solid green");
+            $("#item-quantity-error").text("");
+            itemQuantityField = true;
+            validateItem();
+        } else {
+            $("#item-quantity").css('border', '3px solid red');
+            $("#item-quantity-error").text("Wrong... format : Only Numbers");
+            itemQuantityField = false;
+            validateItem();
+        }
+    });
+
+    $("#item-price").keyup(function () {
+        let price = $("#item-price").val();
+        if (regExItemPrice.test(price)) {
+            $("#item-price").css("border", "3px solid green");
+            $("#item-price-error").text("");
+            itemPriceField = true;
+            validateItem();
+        } else {
+            $("#item-price").css('border', '3px solid red');
+            $("#item-price-error").text("Wrong... format : 0.00");
+            itemPriceField = false;
+            validateItem();
+        }
+    });
+
+    //Enable or Disable Save Button
+    function validateItem() {
+        if (itemCodeField == true && itemNameField == true && itemQuantityField == true && itemPriceField == true) {
+            $("#button-save-item").attr('disabled', false);
+        } else {
+            $("#button-save-item").attr('disabled', true);
+        }
+    }
+
+    //Focus next input fields
     $("#item-code").keydown(function (event) {
         if (event.key == "Enter") {
             $("#item-name").focus();
@@ -686,6 +948,7 @@
         }
     });
 
+    //Load Item Details To Table when press the Enter Key
     $("#item-price").keydown(function (event) {
 
         $("#item-table tbody tr").off();
@@ -699,13 +962,16 @@
             $("#item-table tbody").append(`<tr><td>${code}</td><td>${name}</td><td>${quantity}</td><td>${price}</td></tr>`);
 
             $("#item-table tbody tr").click(function () {
+
+                itemRowIndex = $(this);
+
                 $("#item-code").val($(this).children(":nth-child(1)").text());
                 $("#item-name").val($(this).children(":nth-child(2)").text());
                 $("#item-quantity").val($(this).children(":nth-child(3)").text());
                 $("#item-price").val($(this).children(":nth-child(4)").text());
             });
 
-            $("#item-table tbody tr").dblclick(function (){
+            $("#item-table tbody tr").dblclick(function () {
                 $(this).remove();
             });
 
@@ -716,6 +982,20 @@
 
             $("#item-code").focus();
         }
+    });
+
+    //Clear Input Fields
+    $("#button-clear-item").click(function () {
+        $("#item-code").val('');
+        $("#item-name").val('');
+        $("#item-quantity").val('');
+        $("#item-price").val('');
+    });
+
+
+    $(document).ready(function () {
+        validateCustomer();
+        validateItem();
     });
 </script>
 </body>
