@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Queue</title>
+    <style>
+        body{
+            background-color: rgb(37, 32, 59);
+        }
+
+        h1{
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            text-align: center;
+            display: block;
+        }
+
+        .block-section{
+            width: 900px;
+            height: 300px;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div{
+            width: 900px;
+            height: 100px;
+        }
+
+        .line{
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+        }
+
+        .rectangle{
+            height: 70px;
+            width: 140px;
+        }
+
+        #first-rectangle{
+            width: 140px;
+            height: 70px;
+            top:10px;
+            border-radius: 10px;
+            position: relative;
+            background-color: red;
+        }
+
+        #second-rectangle{
+            border-radius: 10px;
+            background-color: green;
+        }
+
+        #third-rectangle{
+            border-radius: 10px;
+            background-color: blue;
+        }
+
+        #fourth-rectangle{
+            border-radius: 10px;
+            background-color: yellow;
+        }
+
+        #fifth-rectangle{
+            border-radius: 10px;
+            background-color: pink;
+        }
+
+        .last-block{
+            display: flex;
+            justify-content: end;
+        }
+
+        #sixth-rectangle{
+            width: 140px;
+            height: 70px;
+            border-radius: 10px;
+            background-color: rgb(178, 77, 224);
+            position: relative;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+<section class="main-section">
+    <h1>Java Script Queue</h1>
+    <section class="block-section">
+        <div>
+            <div id="first-rectangle"></div>
+        </div>
+        <div class="line">
+            <div class="rectangle"></div>
+            <div class="rectangle" id="second-rectangle"></div>
+            <div class="rectangle" id="third-rectangle"></div>
+            <div class="rectangle" id="fourth-rectangle"></div>
+            <div class="rectangle" id="fifth-rectangle"></div>
+            <div class="rectangle"></div>
+        </div>
+        <div class="last-block">
+            <div id="sixth-rectangle"></div>
+        </div>
+    </section>
+</section>
+</body>
+</html>
