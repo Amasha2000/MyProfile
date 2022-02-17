@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knight Rider</title>
     <style>
-        body{
+        body {
             background-color: black;
         }
 
-        h1{
+        h1 {
             color: rgb(235, 59, 126);
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 40px;
             text-align: center;
             position: relative;
-            top:80px;
+            top: 80px;
             text-decoration-line: underline;
         }
 
-        #first-section{
+        #first-section {
             background-color: white;
             width: 800px;
             height: 50px;
             position: absolute;
-            top:0;
+            top: 0;
             bottom: 0;
             left: 0;
             right: 0;
@@ -33,43 +33,43 @@
             display: flex;
         }
 
-        div{
+        div {
             border: 1px solid red;
             flex-grow: 1;
         }
 
-        #first-rectangle{
+        #first-rectangle {
             background-color: red;
         }
 
-        #second-rectangle{
+        #second-rectangle {
             background-color: rgb(92, 31, 31);
         }
 
-        #third-rectangle{
+        #third-rectangle {
             background-color: rgb(124, 52, 46);
         }
 
-        #fourth-rectangle{
+        #fourth-rectangle {
             background-color: rgb(151, 104, 100);
         }
 
-        #fifth-rectangle{
+        #fifth-rectangle {
             background-color: white;
         }
 
-        #second-section{
+        #second-section {
             width: 200px;
             position: absolute;
             left: 0;
             right: 0;
             margin: auto;
-            top:500px;
+            top: 500px;
             display: flex;
             justify-content: space-around
         }
 
-        button{
+        button {
             width: 70px;
             height: 30px;
             font-size: 15px;
@@ -77,11 +77,11 @@
             cursor: pointer;
         }
 
-        #first-button{
+        #first-button {
             background-color: rgb(28, 101, 197);
         }
 
-        #second-button{
+        #second-button {
             background-color: rgb(172, 11, 11);
         }
     </style>
@@ -100,6 +100,47 @@
     <button id="second-button">Stop</button>
 </section>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    var firstColor = $("#first-rectangle").css("background-color");
+    var secondColor = $("#second-rectangle").css("background-color");
+    var thirdColor = $("#third-rectangle").css("background-color");
+    var fourthColor = $("#fourth-rectangle").css("background-color");
+    var fifthColor = $("#fifth-rectangle").css("background-color");
 
+    var colors = [firstColor, secondColor, thirdColor, fourthColor, fifthColor];
+
+    var rectangles = [$("#first-rectangle"), $("#second-rectangle"), $("#third-rectangle"), $("#fourth-rectangle"), $("#fifth-rectangle")];
+
+    var i = 0;
+    var temp = [];
+
+    function animate() {
+        temp.unshift(colors[i]);
+
+        for (let j = 0; j < temp.length; j++) {
+            $(rectangles[j]).css('background-color', temp[j]);
+        }
+
+        i++;
+
+        if (i == 10) {
+            i = 0;
+            temp = [];
+            rectangles = rectangles.reverse();
+        }
+    }
+
+    let timer;
+    $("#first-button").click(function () {
+        clearInterval(timer);
+        timer = setInterval(animate, 60);
+    });
+
+
+    $("#second-button").click(function () {
+        clearInterval(timer);
+    });
+
+</script>
 </body>
 </html>
