@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight Rider</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        h1{
+            color: rgb(235, 59, 126);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            text-align: center;
+            position: relative;
+            top:80px;
+            text-decoration-line: underline;
+        }
+
+        #first-section{
+            background-color: white;
+            width: 800px;
+            height: 50px;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+        }
+
+        div{
+            border: 1px solid red;
+            flex-grow: 1;
+        }
+
+        #first-rectangle{
+            background-color: red;
+        }
+
+        #second-rectangle{
+            background-color: rgb(92, 31, 31);
+        }
+
+        #third-rectangle{
+            background-color: rgb(124, 52, 46);
+        }
+
+        #fourth-rectangle{
+            background-color: rgb(151, 104, 100);
+        }
+
+        #fifth-rectangle{
+            background-color: white;
+        }
+
+        #second-section{
+            width: 200px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top:500px;
+            display: flex;
+            justify-content: space-around
+        }
+
+        button{
+            width: 70px;
+            height: 30px;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #first-button{
+            background-color: rgb(28, 101, 197);
+        }
+
+        #second-button{
+            background-color: rgb(172, 11, 11);
+        }
+    </style>
+</head>
+<body>
+<h1>Java Script Knight Rider</h1>
+<section id="first-section">
+    <div id="first-rectangle"></div>
+    <div id="second-rectangle"></div>
+    <div id="third-rectangle"></div>
+    <div id="fourth-rectangle"></div>
+    <div id="fifth-rectangle"></div>
+</section>
+<section id="second-section">
+    <button id="first-button">Start</button>
+    <button id="second-button">Stop</button>
+</section>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
