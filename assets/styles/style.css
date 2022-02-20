@@ -474,9 +474,9 @@ nav .fa {
     display: flex;
     position: relative;
     flex-direction: column;
-    gap: 70px;
+    gap: 75px;
     position: relative;
-    top: -175px;
+    top: -195px;
     left: 420px;
     width: 405px;
     height: 400px;
@@ -485,46 +485,66 @@ nav .fa {
 
 .line1 {
     width: 330px;
-    height: 2px;
+    height: 3px;
     background-color: white;
 }
 
 .line2 {
     width: 330px;
-    height: 2px;
+    height: 3px;
     background-color: white;
 }
 
 .line3 {
     width: 330px;
-    height: 2px;
+    height: 3px;
     background-color: white;
 }
 
 .line4 {
     width: 330px;
-    height: 2px;
+    height: 3px;
     background-color: white;
 }
 
 .line5 {
     width: 330px;
-    height: 2px;
+    height: 3px;
     background-color: white;
 }
 
 .details {
     display: inline-block;
     position: relative;
-    top: -615px;
+    top: -630px;
     left: 800px;
     width: 550px;
     height: 380px;
     margin: 0;
 }
 
+#icon-name {
+    color: gold;
+}
+
+#icon-birthday {
+    color: #0be215;
+}
+
+#icon-city {
+    color: aqua;
+}
+
+#icon-mail {
+    color: #4498f1;
+}
+
+#icon-phone {
+    color: #de2ef1;
+}
+
 .details > p {
-    padding-bottom: 23px;
+    padding-bottom: 30px;
 }
 
 .my-name {
@@ -537,6 +557,7 @@ nav .fa {
     font-size: 23px;
     font-family: Calibri;
     color: whitesmoke;
+    letter-spacing: 1px;
 }
 
 .my-birthday {
@@ -549,6 +570,7 @@ nav .fa {
     font-size: 23px;
     font-family: Calibri;
     color: whitesmoke;
+    letter-spacing: 1px;
 }
 
 .my-city {
@@ -561,18 +583,25 @@ nav .fa {
     font-size: 23px;
     font-family: Calibri;
     color: whitesmoke;
+    letter-spacing: 1px;
 }
 
-.my-address {
+.my-mail {
     color: #4498f1;
     font-size: 20px;
     font-weight: bold;
 }
 
-.address {
+.mail {
+    font-size: 20px;
+    font-family: Calibri;
+}
+
+.mail > a {
     font-size: 23px;
     font-family: Calibri;
     color: whitesmoke;
+    text-decoration: none;
 }
 
 .my-number {
@@ -585,6 +614,7 @@ nav .fa {
     font-size: 23px;
     font-family: Calibri;
     color: whitesmoke;
+    letter-spacing: 1px;
 }
 
 .icons a > img {
@@ -593,7 +623,6 @@ nav .fa {
     position: relative;
     transition-duration: 0.5s;
     padding-right: 60px;
-    width: 50px;
 }
 
 .icons a > img:hover {
@@ -782,14 +811,14 @@ nav .fa {
     font-size: 12px;
     width: 550px;
     left: 250px;
-    top: 205px;
+    top: 160px;
     position: relative;
 }
 
 .skills .bar {
     background-color: #023361;
     display: block;
-    height: 7px;
+    height: 5px;
     border: 1px solid rgba(0, 0, 0, 3);
     border-radius: 3px;
     overflow: hidden;
@@ -797,7 +826,7 @@ nav .fa {
 }
 
 .bar span {
-    height: 7px;
+    height: 5px;
     float: left;
     background: aqua;
 }
@@ -1756,11 +1785,15 @@ footer h3 {
         font-size: 15px;
     }
 
-    .my-address {
+    .my-mail {
         font-size: 12px;
     }
 
-    .address {
+    .mail a {
+        font-size: 15px;
+    }
+
+    .mail {
         font-size: 15px;
     }
 
@@ -2057,11 +2090,15 @@ footer h3 {
         font-size: 15px;
     }
 
-    .my-address {
+    .my-mail {
         font-size: 13px;
     }
 
-    .address {
+    .mail a {
+        font-size: 15px;
+    }
+
+    .mail {
         font-size: 15px;
     }
 
@@ -2107,11 +2144,15 @@ footer h3 {
         font-size: 16px;
     }
 
-    .my-address {
+    .my-mail {
         font-size: 13px;
     }
 
-    .address {
+    .mail a {
+        font-size: 16px;
+    }
+
+    .mail {
         font-size: 16px;
     }
 
@@ -2210,11 +2251,15 @@ footer h3 {
         font-size: 18px;
     }
 
-    .my-address {
+    .my-mail {
         font-size: 15px;
     }
 
-    .address {
+    .mail a {
+        font-size: 18px;
+    }
+
+    .mail {
         font-size: 18px;
     }
 
@@ -2396,11 +2441,15 @@ footer h3 {
         font-size: 20px;
     }
 
-    .my-address {
+    .my-mail {
         font-size: 17px;
     }
 
-    .address {
+    .mail a {
+        font-size: 20px;
+    }
+
+    .mail {
         font-size: 20px;
     }
 
@@ -2788,11 +2837,15 @@ footer h3 {
         font-size: 23px;
     }
 
-    .my-address {
+    .my-mail {
         font-size: 20px;
     }
 
-    .address {
+    .mail a {
+        font-size: 23px;
+    }
+
+    .mail {
         font-size: 23px;
     }
 
@@ -3152,11 +3205,15 @@ footer h3 {
         font-size: 19px;
     }
 
-    .my-address {
+    .my-mail {
         font-size: 18px;
     }
 
-    .address {
+    .mail a {
+        font-size: 19px;
+    }
+
+    .mail {
         font-size: 19px;
     }
 
@@ -3208,8 +3265,8 @@ footer h3 {
     .skills li {
         font-size: 12px;
         width: 480px;
-        left: 180px;
-        top: 190px;
+        left: 150px;
+        top: 170px;
         margin: 0;
     }
 
@@ -3325,7 +3382,7 @@ footer h3 {
         font-size: 12px;
         width: 480px;
         left: 180px;
-        top: 190px;
+        top: 160px;
         margin: 0;
     }
 
