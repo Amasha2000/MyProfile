@@ -8,6 +8,8 @@ function hideMenu() {
     navLinks.style.right = "-200px";
 }
 
+
+// scroll animations using dom manipulation
 window.onload = function () {
     const effect = document.querySelector(".main-home p");
     const effectOne = document.querySelectorAll(".main-home h2 , .main-home h3 , .main-home h5 , .my-image , .side-bar h3 ");
@@ -64,7 +66,7 @@ window.onload = function () {
 
     function scrollEffectTwo() {
         effectTwo.forEach(function (element) {
-            if (window.scrollY >= 400) {
+            if (window.scrollY >= 300) {
                 element.style.opacity = "1";
                 element.style.transform = "translateY(0px)";
                 element.style.transition = "1s ease-in-out";
@@ -80,7 +82,7 @@ window.onload = function () {
 
     function scrollEffectThree() {
         effectThree.forEach(function (element) {
-            if (window.scrollY >= 400) {
+            if (window.scrollY >= 300) {
                 element.style.opacity = "1";
                 element.style.transform = "translateX(0px)";
                 element.style.transition = "1s ease-in-out";
@@ -94,7 +96,7 @@ window.onload = function () {
     scrollEffectThree();
 
     function scrollEffectFour() {
-        if (window.scrollY >= 1000) {
+        if (window.scrollY >= 800) {
             effectFour.style.opacity = "1";
             effectFour.style.transform = "translateX(0px)";
             effectFour.style.transition = "1s ease-in-out";
@@ -107,7 +109,7 @@ window.onload = function () {
     scrollEffectFour();
 
     function scrollEffectFive() {
-        if (window.scrollY >= 1000) {
+        if (window.scrollY >= 800) {
             effectFive.style.opacity = "1";
             effectFive.style.transform = "translateY(0px)";
             effectFive.style.transition = "1s ease-in-out";
