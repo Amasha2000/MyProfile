@@ -80,7 +80,7 @@ function deleteCustomer() {
     let response = searchCustomer($("#cus-id").val());
     if (confirm('Do you want to Delete Customer Details?')) {
         if (response != undefined) {
-            var index = customerArray.indexOf(response.getCustomerId());
+            var index = customerArray.indexOf(response);
             customerArray.splice(index, 1);
             //Load Customer Details To Table
             loadCustomerDetailsToTable();
@@ -269,10 +269,10 @@ $('#cus-id').keydown(function (event) {
     if (event.key == 'Control') {
         var cusId = $('#cus-id').val();
         var responseId = searchCustomer(cusId);
-        $('#cus-id').val(responseId.id);
-        $('#cus-name').val(responseId.name);
-        $('#cus-address').val(responseId.address);
-        $('#tel-num').val(responseId.teleNum);
+        $('#cus-id').val(responseId.getCustomerId());
+        $('#cus-name').val(responseId.getCustomerName());
+        $('#cus-address').val(responseId.getCustomerAddress());
+        $('#tel-num').val(responseId.getCustomerTeleNumber());
     }
 });
 
