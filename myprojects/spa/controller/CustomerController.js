@@ -27,6 +27,10 @@ function saveCustomer() {
 
         //Remove Table Details when double click the row
         removeTableRows();
+
+        //populate customer drop down list
+        populateCustomerDropDown();
+
     } else {
         //clear Input Fields
         clearAll();
@@ -155,6 +159,7 @@ function clearAll() {
         'border',
         'solid 2px #ced4da'
     );
+    
     $('#cus-id').focus();
     $('#button-save-customer').attr('disabled', true);
     loadCustomerDetailsToTable();

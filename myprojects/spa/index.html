@@ -593,7 +593,7 @@
               </div>
               <div class="col-6">
                 <label for="date" class="form-label">Date</label>
-                <input type="password" class="form-control" id="date" />
+                <input type="date" class="form-control" id="date" />
               </div>
               <div class="col-6">
                 <label for="customer" class="form-label">Customer</label>
@@ -602,8 +602,7 @@
               <div class="col-6">
                 <label for="cusID" class="form-label">Customer ID</label>
                 <select id="cusID" class="form-select">
-                  <option selected>Choose...</option>
-                  <option>...</option>
+                  <option style="display:none;"  selected>Choose...</option>
                 </select>
               </div>
               <div class="col-12">
@@ -896,6 +895,29 @@
       //     $("#item-page").css('display', 'none');
       //     $("#order-page").css('display', 'block');
       // });
+      // $( "#date" ).datepicker({ showAnim: "fold" })
+
+      document.getElementById('date').valueAsDate = new Date();
+
+      function populateCustomerDropDown(){
+        var select =document.getElementById("cusID");
+        $("#cusID").empty();
+        var customerOptions = [];
+        customerOptions[0]="Choose...";
+
+        for (var i = 0; i < customerArray.length; i++) {
+          customerOptions[i+1] = customerArray[i].getCustomerId();
+        }
+
+        for (var i = 0; i < customerOptions.length; i++) {
+          var opt = customerOptions[i];
+          var el = document.createElement('option');
+          el.textContent = opt;
+          el.value = opt;
+          select.appendChild(el);
+        }
+      }
+
 
     </script>
   </body>
