@@ -27,6 +27,10 @@ function saveItem() {
 
         //Remove Table Details when double click the row
         removeItemTableRows();
+
+        //populate item drop down list
+        populateItemDropDown();
+
     } else {
         //clear Input Fields
         clearAllItemDetails();
@@ -93,6 +97,9 @@ function deleteItem() {
 
             //Remove Table Details when double click the row
             removeItemTableRows();
+
+            //populate item drop down list
+            populateItemDropDown();
         } else {
             alert("Add Item Details To Delete!!!");
             clearAllItemDetails();

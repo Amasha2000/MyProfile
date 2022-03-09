@@ -97,6 +97,9 @@ function deleteCustomer() {
 
             //Remove Table Details when double click the row
             removeTableRows();
+
+            //populate customer drop down list
+            populateCustomerDropDown();
         } else {
             alert("Add Customer Details To Delete!!!");
             clearAll();
