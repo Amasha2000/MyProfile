@@ -15,29 +15,29 @@ function saveItem() {
         var response = searchItem(itemCode);
 
         if (response != undefined) {
-            swal("The Item already exists","warning");
+            swal("The Item already exists", "warning");
             //clear Input Fields
             clearAllItemDetails();
-        }else{
+        } else {
 
-        var itemObject = new ItemDTO(itemCode, itemName, quantity, price);
+            var itemObject = new ItemDTO(itemCode, itemName, quantity, price);
 
-        itemArray.push(itemObject);
+            itemArray.push(itemObject);
 
-        //Load Item Details To Table
-        loadItemDetailsToTable();
+            //Load Item Details To Table
+            loadItemDetailsToTable();
 
-        //clear Input Fields
-        clearAllItemDetails();
+            //clear Input Fields
+            clearAllItemDetails();
 
-        //Load Table Details To Input Fields
-        loadItemDetailsToInputFields();
+            //Load Table Details To Input Fields
+            loadItemDetailsToInputFields();
 
-        //Remove Table Details when double click the row
-        removeItemTableRows();
+            //Remove Table Details when double click the row
+            removeItemTableRows();
 
-        //populate item drop down list
-        populateItemDropDown();
+            //populate item drop down list
+            populateItemDropDown();
         }
     } else {
         //clear Input Fields
@@ -74,7 +74,7 @@ function updateItem() {
             //Remove Table Details when double click the row
             removeItemTableRows();
         } else {
-            swal("Add Item Details To Update!!!","warning");
+            swal("Add Item Details To Update!!!", "warning");
             clearAllItemDetails();
         }
     } else {
@@ -109,7 +109,7 @@ function deleteItem() {
             //populate item drop down list
             populateItemDropDown();
         } else {
-            swal("Add Item Details To Delete!!!","warning");
+            swal("Add Item Details To Delete!!!", "warning");
             clearAllItemDetails();
         }
     } else {
@@ -136,7 +136,7 @@ $('#item-search-button').on('click', function () {
         removeItemTableRows();
     } else {
         $('#item-search').val('');
-        swal('No such a Item',"info");
+        swal('No such a Item', "info");
     }
 });
 

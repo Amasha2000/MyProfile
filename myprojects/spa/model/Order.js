@@ -1,38 +1,38 @@
-function OrderDTO(orderID,customerId,date,totalCost){
-    var __orderID=orderID;
-    var __customerId=customerId;
-    var __date=date;
-    var __totalCost=totalCost;
+function OrderDTO(orderID, customerId, date, totalCost) {
+    var __orderID = orderID;
+    var __customerId = customerId;
+    var __date = date;
+    var __totalCost = totalCost;
 
-    this.setOrderID=function(orderId){
-        __orderID=orderId;
+    this.setOrderID = function (orderId) {
+        __orderID = orderId;
     }
 
-    this.getOrderID=function(){
+    this.getOrderID = function () {
         return __orderID;
     }
 
-    this.setCusId=function(custId){
-        __customerId=custId;
+    this.setCusId = function (custId) {
+        __customerId = custId;
     }
 
-    this.getCusId=function(){
+    this.getCusId = function () {
         return __customerId;
     }
 
-    this.setDate=function(orderDate){
-        __date=orderDate;
+    this.setDate = function (orderDate) {
+        __date = orderDate;
     }
 
-    this.getDate=function(){
+    this.getDate = function () {
         return __date;
     }
 
-    this.setCost=function(cost){
-        __totalCost=cost;
+    this.setCost = function (cost) {
+        __totalCost = cost;
     }
 
-    this.getCost=function(){
+    this.getCost = function () {
         return __totalCost;
     }
 }

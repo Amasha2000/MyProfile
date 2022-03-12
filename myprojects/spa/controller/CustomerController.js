@@ -15,30 +15,30 @@ function saveCustomer() {
         var response = searchCustomer(customerId);
 
         if (response != undefined) {
-            swal("The Customer already exists","warning");
+            swal("The Customer already exists", "warning");
             //clear Input Fields
             clearAll();
 
-        }else{
-            
-        var customerObject = new CustomerDTO(customerId, customerName, customerAddress, customerTeleNum);
+        } else {
 
-        customerArray.push(customerObject);
+            var customerObject = new CustomerDTO(customerId, customerName, customerAddress, customerTeleNum);
 
-        //Load Customer Details To Table
-        loadCustomerDetailsToTable();
+            customerArray.push(customerObject);
 
-        //clear Input Fields
-        clearAll();
+            //Load Customer Details To Table
+            loadCustomerDetailsToTable();
 
-        //Load Table Details To Input Fields
-        loadCustomerDetailsToInputFields();
+            //clear Input Fields
+            clearAll();
 
-        //Remove Table Details when double click the row
-        removeTableRows();
+            //Load Table Details To Input Fields
+            loadCustomerDetailsToInputFields();
 
-        //populate customer drop down list
-        populateCustomerDropDown();
+            //Remove Table Details when double click the row
+            removeTableRows();
+
+            //populate customer drop down list
+            populateCustomerDropDown();
 
         }
     } else {
@@ -76,7 +76,7 @@ function updateCustomer() {
             //Remove Table Details when double click the row
             removeTableRows();
         } else {
-            swal("Add Customer Details To Update!!!","warning");
+            swal("Add Customer Details To Update!!!", "warning");
             clearAll();
         }
     } else {
@@ -111,7 +111,7 @@ function deleteCustomer() {
             //populate customer drop down list
             populateCustomerDropDown();
         } else {
-            swal("Add Customer Details To Delete!!!","warning");
+            swal("Add Customer Details To Delete!!!", "warning");
             clearAll();
         }
     } else {
@@ -138,7 +138,7 @@ $('#customer-search-button').on('click', function () {
         removeTableRows();
     } else {
         $('#cus-search').val('');
-        swal('No such a Customer',"info");
+        swal('No such a Customer', "info");
     }
 });
 
@@ -172,7 +172,7 @@ function clearAll() {
         'border',
         'solid 2px #ced4da'
     );
-    
+
     $('#cus-id').focus();
     $('#button-save-customer').attr('disabled', true);
     loadCustomerDetailsToTable();
