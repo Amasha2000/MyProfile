@@ -12,6 +12,15 @@ function saveCustomer() {
         let customerAddress = $('#cus-address').val();
         let customerTeleNum = $('#tel-num').val();
 
+        var response = searchCustomer(customerId);
+
+        if (response != undefined) {
+            swal("The Customer already exists","warning");
+            //clear Input Fields
+            clearAll();
+
+        }else{
+            
         var customerObject = new CustomerDTO(customerId, customerName, customerAddress, customerTeleNum);
 
         customerArray.push(customerObject);
@@ -31,6 +40,7 @@ function saveCustomer() {
         //populate customer drop down list
         populateCustomerDropDown();
 
+        }
     } else {
         //clear Input Fields
         clearAll();
@@ -66,7 +76,7 @@ function updateCustomer() {
             //Remove Table Details when double click the row
             removeTableRows();
         } else {
-            alert("Add Customer Details To Update!!!");
+            swal("Add Customer Details To Update!!!","warning");
             clearAll();
         }
     } else {
@@ -101,7 +111,7 @@ function deleteCustomer() {
             //populate customer drop down list
             populateCustomerDropDown();
         } else {
-            alert("Add Customer Details To Delete!!!");
+            swal("Add Customer Details To Delete!!!","warning");
             clearAll();
         }
     } else {
@@ -128,7 +138,7 @@ $('#customer-search-button').on('click', function () {
         removeTableRows();
     } else {
         $('#cus-search').val('');
-        alert('No such a Customer');
+        swal('No such a Customer',"info");
     }
 });
 

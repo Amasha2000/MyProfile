@@ -178,15 +178,9 @@ nav > div > span {
     background: linear-gradient(#ab8bec, #96e1f1);
 }
 
-#dropdown-customer {
-    top: 65px;
-    left: 100px;
-    display: inline;
-}
 
 #customer-search-button {
     top: 65px;
-    left: -90px;
     display: inline;
     position: relative;
 }
@@ -252,15 +246,8 @@ nav > div > span {
     color: white;
 }
 
-#dropdown-item {
-    top: 65px;
-    left: 100px;
-    display: inline;
-}
-
 #item-search-button {
     top: 65px;
-    left: -90px;
     display: inline;
     position: relative;
 }
@@ -283,24 +270,24 @@ nav > div > span {
 .order-topic img {
     position: relative;
     left: 10px;
-    top: 100px;
+    top: 80px;
 }
 
 .order-topic h3 {
     position: relative;
     left: 24px;
-    top: 105px;
+    top: 85px;
     display: inline;
 }
 
 #first-row {
     position: relative;
-    top: 110px;
+    top: 85px;
 }
 
 #second-row {
     position: relative;
-    top: 118px;
+    top: 90px;
 }
 
 #top-order-invoice {

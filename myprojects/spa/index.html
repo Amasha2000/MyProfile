@@ -307,24 +307,6 @@
                   aria-describedby="inputGroup-sizing-default"
                 />
               </div>
-              <div class="dropdown" id="dropdown-customer">
-                <button
-                  class="btn btn-info dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Name
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </div>
               <button
                 id="customer-search-button"
                 type="submit"
@@ -477,24 +459,6 @@
                   aria-describedby="inputGroup-sizing-default"
                 />
               </div>
-              <div class="dropdown" id="dropdown-item">
-                <button
-                  class="btn btn-info dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Name
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </div>
               <button
                 id="item-search-button"
                 type="submit"
@@ -589,7 +553,17 @@
             <form class="row g-3" id="invoice-form">
               <div class="col-6">
                 <label for="orderID" class="form-label">Order ID</label>
-                <input type="email" class="form-control" id="orderID" />
+                <input type="text" class="form-control" id="orderID" />
+                <p>
+                  <small id="order-error" class="text-danger pl-1"></small>
+                </p>
+              </div>
+              <div class="col-6">
+                <label for="search" class="form-label">Search</label>
+                <input type="text" class="form-control" id="order-search" />
+                <p>
+                  <small id="order-search-error" class="text-danger pl-1"></small>
+                </p>
               </div>
               <div class="col-6">
                 <label for="date" class="form-label">Date</label>
@@ -604,8 +578,11 @@
               <div class="col-6">
                 <label for="customer" class="form-label">Customer</label>
                 <input type="text" class="form-control" id="customer" />
+                <p>
+                  <small id="customer-error" class="text-danger pl-1"></small>
+                </p>
               </div>
-              <div class="col-12">
+              <div class="col-6">
                 <label for="name" class="form-label">Name</label>
                 <input
                   type="text"
@@ -613,15 +590,21 @@
                   id="name"
                   placeholder=""
                 />
+                <p>
+                  <small id="customer-name-error" class="text-danger pl-1"></small>
+                </p>
               </div>
               <div class="col-12">
-                <label for="address" class="form-label">Address</label>
+                <label for="customer-address" class="form-label">Address</label>
                 <input
                   type="text"
                   class="form-control"
                   id="address"
                   placeholder=""
                 />
+                <p>
+                  <small id="address-error" class="text-danger pl-1"></small>
+                </p>
               </div>
               <div class="col-12">
                 <label for="telNum" class="form-label">Telephone Number</label>
@@ -631,6 +614,9 @@
                   id="telNum"
                   placeholder=""
                 />
+                <p>
+                  <small id="number-error" class="text-danger pl-1"></small>
+                </p>
               </div>
             </form>
           </div>
@@ -642,17 +628,23 @@
               <h5>Item Select</h5>
             </div>
             <form class="row g-3" id="item-form">
-              <div class="col-6">
+              <div class="col-12">
                 <label for="itemCode" class="form-label">Item Code</label>
                 <select id="ItemCode" class="form-select">
                   <option style="display: none" selected>Choose...</option>
                 </select>
+                <p>
+                  <small></small>
+                </p>
               </div>
               <div class="col-6">
                 <label for="item" class="form-label">Item</label>
                 <input type="text" class="form-control" id="item" />
+                <p>
+                  <small id="item-error" class="text-danger pl-1"></small>
+                </p>
               </div>
-              <div class="col-12">
+              <div class="col-6">
                 <label for="itemName" class="form-label">Item Name</label>
                 <input
                   type="text"
@@ -660,6 +652,9 @@
                   id="itemName"
                   placeholder=""
                 />
+                <p>
+                  <small id="itemName-error" class="text-danger pl-1"></small>
+                </p> 
               </div>
               <div class="col-12">
                 <label for="quantityOnHand" class="form-label"
@@ -671,6 +666,9 @@
                   id="quantityOnHand"
                   placeholder=""
                 />
+                <p>
+                  <small id="qty-error" class="text-danger pl-1"></small>
+                </p>
                 <div class="col-12">
                   <label for="price" class="form-label">Price</label>
                   <input
@@ -679,6 +677,9 @@
                     id="price"
                     placeholder=""
                   />
+                  <p>
+                    <small id="price-error" class="text-danger pl-1"></small>
+                  </p>
                 </div>
               </div>
               <div class="col-12">
@@ -689,10 +690,17 @@
                   id="quantity"
                   placeholder=""
                 />
-                <p><small id="orderQuantity-error" class="text-danger pl-1"></small></p>
+                <p>
+                  <small
+                    id="orderQuantity-error"
+                    class="text-danger pl-1"
+                  ></small>
+                </p>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary" id="btnAddItem">Add Item</button>
+                <button type="submit" class="btn btn-primary" id="btnAddItem">
+                  Add Item
+                </button>
               </div>
             </form>
           </div>
@@ -702,13 +710,13 @@
           >
             <form class="row g-3" id="bill">
               <div class="col-3">
-                <h5>Total:  Rs.</h5>
+                <h5>Total: Rs.</h5>
               </div>
               <div class="col-9">
                 <h5 id="total"></h5>
               </div>
               <div class="col-4">
-              <h5>Sub Total:  Rs.</h5>
+                <h5>Sub Total: Rs.</h5>
               </div>
               <div class="col-8">
                 <h5 id="sub-total"></h5>
@@ -721,7 +729,9 @@
                   id="cash"
                   placeholder=""
                 />
-                <p><small id="credit-error" class="text-danger pl-1"></small></p>
+                <p>
+                  <small id="credit-error" class="text-danger pl-1"></small>
+                </p>
               </div>
               <div class="col-12">
                 <label for="discount" class="form-label">Discount</label>
@@ -731,6 +741,9 @@
                   id="discount"
                   placeholder=""
                 />
+                <p>
+                  <small id="discount-error" class="text-danger pl-1"></small>
+                </p>
               </div>
               <div class="col-12">
                 <label for="balance" class="form-label">Balance</label>
@@ -764,8 +777,7 @@
                   <th scope="col">Total</th>
                 </tr>
               </thead>
-              <tbody>
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </div>
@@ -779,9 +791,9 @@
     <script src="../spa/model/Item.js"></script>
     <script src="../spa/controller/ItemController.js"></script>
     <script src="../spa/model/Order.js"></script>
-    <script src="../spa/model/OrderDetail.js"></script>
     <script src="../spa/controller/OrderController.js"></script>
     <script src="../spa/model/CartTM.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
       document
         .getElementsByClassName('nav-link')[0]
@@ -800,12 +812,11 @@
           document.getElementById('item-page').style.display = 'none';
           document.getElementById('order-page').style.display = 'none';
 
-           //Load Table Details To Input Fields
+          //Load Table Details To Input Fields
           loadCustomerDetailsToInputFields();
 
           //Remove Table Details when double click the row
           removeTableRows();
-
         });
 
       document
@@ -816,11 +827,11 @@
           document.getElementById('customer-page').style.display = 'none';
           document.getElementById('order-page').style.display = 'none';
 
-           //Load Table Details To Input Fields
-           loadItemDetailsToInputFields();
+          //Load Table Details To Input Fields
+          loadItemDetailsToInputFields();
 
           //Remove Table Details when double click the row
-           removeItemTableRows();
+          removeItemTableRows();
         });
 
       document
@@ -919,7 +930,6 @@
       //     $("#item-page").css('display', 'none');
       //     $("#order-page").css('display', 'block');
       // });
- 
     </script>
   </body>
 </html>

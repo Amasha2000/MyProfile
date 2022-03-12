@@ -12,11 +12,11 @@ function OrderDTO(orderID,customerId,date,totalCost){
         return __orderID;
     }
 
-    this.setCustomerId()=function(custId){
+    this.setCusId=function(custId){
         __customerId=custId;
     }
 
-    this.getCustomerId()=function(){
+    this.getCusId=function(){
         return __customerId;
     }
 

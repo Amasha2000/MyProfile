@@ -12,6 +12,14 @@ function saveItem() {
         let quantity = $('#item-quantity').val();
         let price = $('#item-price').val();
 
+        var response = searchItem(itemCode);
+
+        if (response != undefined) {
+            swal("The Item already exists","warning");
+            //clear Input Fields
+            clearAllItemDetails();
+        }else{
+
         var itemObject = new ItemDTO(itemCode, itemName, quantity, price);
 
         itemArray.push(itemObject);
@@ -30,7 +38,7 @@ function saveItem() {
 
         //populate item drop down list
         populateItemDropDown();
-
+        }
     } else {
         //clear Input Fields
         clearAllItemDetails();
@@ -66,7 +74,7 @@ function updateItem() {
             //Remove Table Details when double click the row
             removeItemTableRows();
         } else {
-            alert("Add Item Details To Update!!!");
+            swal("Add Item Details To Update!!!","warning");
             clearAllItemDetails();
         }
     } else {
@@ -101,7 +109,7 @@ function deleteItem() {
             //populate item drop down list
             populateItemDropDown();
         } else {
-            alert("Add Item Details To Delete!!!");
+            swal("Add Item Details To Delete!!!","warning");
             clearAllItemDetails();
         }
     } else {
@@ -128,7 +136,7 @@ $('#item-search-button').on('click', function () {
         removeItemTableRows();
     } else {
         $('#item-search').val('');
-        alert('No such a Item');
+        swal('No such a Item',"info");
     }
 });
 
