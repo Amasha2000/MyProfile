@@ -8,11 +8,6 @@ function hideMenu() {
     navLinks.style.right = "-200px";
 }
 
- //preloader
-// $(window).on('load',function(){
-//     $("#preloader").fadeOut(1000);
-//   });
-
 // scroll animations using dom manipulation
 window.onload = function () {
     const effect = document.querySelector(".main-home p");
