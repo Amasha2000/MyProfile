@@ -20,6 +20,25 @@ body {
     overflow-x: hidden;
 }
 
+/*Pre-loader*/
+#preloader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #8a099b;
+}
+
+#preloader>img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
 /*start of the home page*/
 .home {
     width: calc(100vw - (100vw - 100%));
